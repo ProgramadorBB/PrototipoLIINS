@@ -13,5 +13,15 @@ namespace PrototipoLIINS
         {
             InitializeComponent();
         }
+
+        private void BtnIngresar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRegistrarCuenta_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
