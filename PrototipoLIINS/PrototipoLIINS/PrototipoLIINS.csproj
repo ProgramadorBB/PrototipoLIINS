@@ -13,8 +13,4 @@
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Conexion\" />
-  </ItemGroup>
 </Project>

@@ -19,7 +19,7 @@ namespace PrototipoLIINS.Modelo
 
         [MaxLength(100)] public string Apellido { get; set; }
 
-        [MaxLength(25)] public string Privilegio { get; set; }
+        [MaxLength(25)] public string Tipo { get; set; }
 
         [MaxLength(25)] public string Estado { get; set; }
     }
