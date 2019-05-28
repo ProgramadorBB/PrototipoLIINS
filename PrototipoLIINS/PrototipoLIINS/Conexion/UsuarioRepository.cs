@@ -49,6 +49,19 @@ namespace PrototipoLIINS.Conexion
             int result = 0;
             try
             {
+                if (string.IsNullOrEmpty(email))
+                    throw new Exception("Email inválido");
+                if (string.IsNullOrEmpty(contraseña))
+                    throw new Exception("Contraseña inválida");
+                if (string.IsNullOrEmpty(nombre))
+                    throw new Exception("Nombre inválido");
+                if (string.IsNullOrEmpty(apellido))
+                    throw new Exception("Apellido inválido");
+                if (string.IsNullOrEmpty(tipo))
+                    throw new Exception("Tipo inválido");
+                if (string.IsNullOrEmpty(estado))
+                    throw new Exception("Estado inválido");
+
                 result = con.Insert(new Usuario()
                 {
                     Email = email,
@@ -62,7 +75,7 @@ namespace PrototipoLIINS.Conexion
                 EstadoMensaje = string.Format("{0} Nuevo usuario añadido", result);
             } catch (Exception e)
             {
-                EstadoMensaje = e.Message;
+                EstadoMensaje = "El usuario ya está registrado";
             }
         }
 

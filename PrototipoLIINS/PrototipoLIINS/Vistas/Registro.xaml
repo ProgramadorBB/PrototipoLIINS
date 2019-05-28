@@ -52,6 +52,7 @@
             <Label Text=""
                    x:Name="lblMensaje"
                    FontSize="Medium"
+                   FontAttributes="Bold"
                    HorizontalTextAlignment="Center"/>
 
             <Label Text="Developed by: B.P.S. Solutions S.A.®"
