@@ -17,6 +17,15 @@ namespace PrototipoLIINS
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             Application.Current.Properties.Clear();
+
+            string admin = "Admin";
+            Usuario buscarAdmin = UsuarioRepository.Instancia.BuscarUsuario(admin);
+
+            if(buscarAdmin == null)
+            {
+                UsuarioRepository.Instancia.AddNuevoUsuario(admin, "123", "Admin", "Admin", "Admin", "desbloqueado");
+            }
+
         }
 
         private void BtnIngresar_Clicked(object sender, EventArgs e)

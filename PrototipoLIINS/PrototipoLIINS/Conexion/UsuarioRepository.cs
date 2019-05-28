@@ -122,5 +122,53 @@ namespace PrototipoLIINS.Conexion
             return false;
         }
 
+        public int DeleteUsuario(int id)
+        {
+            int result = 0;
+            try
+            {
+                result = con.Delete<Usuario>(id);
+
+                if (result > 0)
+                {
+                    EstadoMensaje = string.Format("Eliminado [id: {0}]", id);
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                EstadoMensaje = e.Message;
+            }
+            return result;
+        }
+
+        public Usuario BuscarUsuario(string email)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(email))
+                    throw new Exception("Ingrese un email válido");
+
+                var usuario = from u in con.Table<Usuario>()
+                              where u.Email == email
+                              select u;
+                Usuario buscado = usuario.SingleOrDefault();
+
+                if (buscado != null)
+                {
+                    return buscado;
+                }
+            }
+            catch (Exception e)
+            {
+                EstadoMensaje = e.Message;
+                return null;
+            }
+
+            EstadoMensaje = "No existen coincidencias";
+            return null;
+        }
+
     }
 }
