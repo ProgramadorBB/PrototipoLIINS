@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PrototipoLIINS.Conexion;
+using PrototipoLIINS.Modelo;
+using System.Collections.ObjectModel;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,10 +15,14 @@ namespace PrototipoLIINS.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class VistaAdmin : ContentPage
 	{
-		public VistaAdmin ()
+        IList<Usuario> users = new ObservableCollection<Usuario>();
+
+        public VistaAdmin ()
 		{
-			InitializeComponent ();
-		}
+            BindingContext = users;
+            InitializeComponent ();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         private void OnUpdateUser(object sender, ItemTappedEventArgs e)
         {
@@ -25,6 +32,16 @@ namespace PrototipoLIINS.Vistas
         private void OnDeleteUser(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnGetAllUser_Clicked(object sender, EventArgs e)
+        {
+            var allUsers = UsuarioRepository.Instancia.GetAllUsuarios();
+
+
+            foreach (Usuario user in allUsers)
+                if (users.All(u => u.Id != user.Id))
+                    users.Add(user);
         }
     }
 }

@@ -5,9 +5,10 @@
     <ContentPage.Content>
         
         <ScrollView
-            BackgroundColor="DarkSlateGray">
+            BackgroundColor="LightGray">
             <StackLayout Orientation="Vertical"
                      Padding="32"
+                     BackgroundColor="LightGray"
                      Spacing="10">
 
                 <Label
@@ -23,30 +24,28 @@
                 <StackLayout Orientation="Horizontal"
                              HorizontalOptions="CenterAndExpand">
 
-                    <StackLayout Orientation="Vertical"
-                                 WidthRequest="148">
+                    <StackLayout Orientation="Vertical">
 
                         <Button x:Name="btnRegistrarUsuario"
-                        Text="Registrar Usuario"
-                        FontAttributes="Bold"
-                        BorderRadius="10"
-                        BorderWidth="2"
-                        BorderColor="#353535"
-                        BackgroundColor="#545454"
-                        TextColor="LightGoldenrodYellow"
-                        FontSize="Micro"
-                        HeightRequest="33"/>
+                                Text="Registrar Usuario"
+                                BorderRadius="10"
+                                BorderWidth="2"
+                                BorderColor="#353535"
+                                BackgroundColor="#545454"
+                                FontAttributes="Bold"
+                                TextColor="LightGoldenrodYellow"                
+                                HeightRequest="40"/>
 
-                        <Button x:Name="btnGetAllUsers"
-                        Text="Cargar usuarios"
-                        FontAttributes="Bold"
-                        BorderRadius="10"
-                        BorderWidth="2"
-                        BorderColor="#353535"
-                        BackgroundColor="#545454"
-                        TextColor="LightGoldenrodYellow"
-                        FontSize="Micro"
-                        HeightRequest="33"/>
+                        <Button x:Name="btnGetAllUser"
+                                Text="Mostrar Lista de Usuarios"
+                                BorderRadius="10"
+                                BorderWidth="2"
+                                BorderColor="#353535"
+                                BackgroundColor="#545454"
+                                FontAttributes="Bold"
+                                TextColor="LightGoldenrodYellow"                
+                                HeightRequest="40"
+                                Clicked="BtnGetAllUser_Clicked"/>
                     </StackLayout>
 
                     <Button x:Name="btnCerrarSesion"
@@ -57,9 +56,7 @@
                         BorderColor="#353535"
                         BackgroundColor="#545454"
                         TextColor="LightGoldenrodYellow"
-                        FontSize="Micro"
-                        HeightRequest="33"
-                        WidthRequest="62"/>
+                        HeightRequest="40"/>
 
                 </StackLayout>
 
@@ -69,7 +66,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <ViewCell.ContextActions>
+                                    <ViewCell.ContextActions>                                        
                                         <MenuItem Clicked="OnDeleteUser"
                                           CommandParameter="{Binding}"
                                           Text="Eliminar"                                          
@@ -78,17 +75,17 @@
                                     <ViewCell.View>
                                         <StackLayout Orientation="Vertical">
                                             <StackLayout Orientation="Horizontal">
-                                                <Label FontSize="Small" TextColor="DarkRed" Text="{Binding Id}"
+                                                <Label FontSize="Medium" FontAttributes="Bold" TextColor="DarkRed" Text="{Binding Id}"
                                                        VerticalTextAlignment="Center"/>
-                                                <Image Source="user.png"
-                                                       WidthRequest="35"
+                                                <Image Source="usuario.png"
+                                                       WidthRequest="40"
                                                        VerticalOptions="Center"/>
                                                 <StackLayout Orientation="Vertical">
                                                     <StackLayout Orientation="Horizontal">
-                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Tipo}"/>
-                                                        <Label FontSize="Micro" Text="-"/>
-                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Nombre}"/>
-                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Apellido}"/>
+                                                        <Label FontSize="Medium" TextColor="Black" Text="{Binding Tipo}"/>
+                                                        <Label FontSize="Medium" Text="-"/>
+                                                        <Label FontSize="Medium" TextColor="Black" Text="{Binding Nombre}"/>
+                                                        <Label FontSize="Medium" TextColor="Black" Text="{Binding Apellido}"/>
                                                     </StackLayout>
                                                     <StackLayout Orientation="Horizontal">
                                                         <Label FontSize="Micro" Text="Correo:"/>

@@ -25,7 +25,7 @@ namespace PrototipoLIINS.Vistas
             lblMensaje.TextColor = Color.DarkRed;
             //lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
 
-            string tipo = "user";
+            string tipo = "Usuario";
             string estado = "desbloqueado";
 
             if (string.IsNullOrEmpty(txtEmail.Text) &&

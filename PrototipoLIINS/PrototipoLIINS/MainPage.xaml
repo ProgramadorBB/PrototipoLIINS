@@ -41,13 +41,13 @@
                 Clicked="BtnIngresar_Clicked"/>
 
         <Button x:Name="btnRegistrarCuenta"
+                Text="Registro"
                 BorderRadius="10"
                 BorderWidth="2"
                 BorderColor="#353535"
                 BackgroundColor="#545454"
                 FontAttributes="Bold"
-                TextColor="LightGoldenrodYellow"
-                Text="Registro"
+                TextColor="LightGoldenrodYellow"                
                 HeightRequest="40"
                 Clicked="BtnRegistrarCuenta_Clicked"/>
 
