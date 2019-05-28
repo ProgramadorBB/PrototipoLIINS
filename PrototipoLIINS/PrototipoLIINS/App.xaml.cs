@@ -1,17 +1,24 @@
 ﻿using System;
+using System.Linq;
+using System.Text;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using PrototipoLIINS.Modelo;
+using PrototipoLIINS.Conexion;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace PrototipoLIINS
 {
     public partial class App : Application
     {
-        public App()
+        public App(string filename)
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            UsuarioRepository.Inicializador(filename);
+            MainPage = new NavigationPage(new MainPage())
+            { BarBackgroundColor = Color.Black, BarTextColor = Color.White };
         }
 
         protected override void OnStart()

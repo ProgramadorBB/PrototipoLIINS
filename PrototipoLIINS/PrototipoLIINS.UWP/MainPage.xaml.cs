@@ -20,8 +20,9 @@ namespace PrototipoLIINS.UWP
         public MainPage()
         {
             this.InitializeComponent();
+            string dbPath = FileAccess.GetLocalFilePath("usuarios.db3");
 
-            LoadApplication(new PrototipoLIINS.App());
+            LoadApplication(new PrototipoLIINS.App(dbPath));
         }
     }
 }

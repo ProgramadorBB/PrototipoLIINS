@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using PrototipoLIINS.Modelo;
+using PrototipoLIINS.Vistas;
 
 namespace PrototipoLIINS
 {
@@ -12,6 +14,8 @@ namespace PrototipoLIINS
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            Application.Current.Properties.Clear();
         }
 
         private void BtnIngresar_Clicked(object sender, EventArgs e)
@@ -19,9 +23,9 @@ namespace PrototipoLIINS
 
         }
 
-        private void BtnRegistrarCuenta_Clicked(object sender, EventArgs e)
+        private async void BtnRegistrarCuenta_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Registro() { Title = "Registro LIINS"});
         }
     }
 }
