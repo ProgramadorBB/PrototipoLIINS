@@ -7,6 +7,7 @@
 
     <StackLayout Orientation="Vertical"
                  Padding="32"
+                 BackgroundColor="LightGray"
                  Spacing="10">
 
         <Image WidthRequest="256"

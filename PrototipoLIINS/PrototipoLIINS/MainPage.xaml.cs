@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using PrototipoLIINS.Modelo;
 using PrototipoLIINS.Vistas;
+using PrototipoLIINS.Conexion;
 
 namespace PrototipoLIINS
 {
@@ -20,7 +21,14 @@ namespace PrototipoLIINS
 
         private void BtnIngresar_Clicked(object sender, EventArgs e)
         {
+            lblMensaje.Text = string.Empty;
+            Boolean isUsuarioExist = UsuarioRepository.Instancia.AttempLogin(txtEmail.Text, txtContraseña.Text);
+            lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
 
+            if (isUsuarioExist.Equals(true))
+            {
+                lblMensaje.Text = "usuario correcto";
+            }
         }
 
         private async void BtnRegistrarCuenta_Clicked(object sender, EventArgs e)

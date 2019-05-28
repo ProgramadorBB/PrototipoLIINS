@@ -75,7 +75,7 @@ namespace PrototipoLIINS.Conexion
                 EstadoMensaje = string.Format("{0} Nuevo usuario añadido", result);
             } catch (Exception e)
             {
-                EstadoMensaje = "El usuario ya está registrado";
+                EstadoMensaje = e.Message;
             }
         }
 
@@ -90,6 +90,36 @@ namespace PrototipoLIINS.Conexion
                 EstadoMensaje = e.Message;
             }
             return Enumerable.Empty<Usuario>();
+        }
+
+        public Boolean AttempLogin(string email, string contraseña)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(email))
+                    throw new Exception("Ingrese un email válido");
+                if (string.IsNullOrEmpty(contraseña))
+                    throw new Exception("Ingrese una Contraseña válida");
+                var usuario = from u in con.Table<Usuario>()
+                              where u.Email == email && u.Contraseña == contraseña
+                              select u;
+
+                Usuario user = usuario.SingleOrDefault();
+
+                if (user != null)
+                {
+                    return true;
+                }
+
+            }
+            catch (Exception e)
+            {
+                EstadoMensaje = e.Message;
+                return false;
+            }
+
+            EstadoMensaje = "Usuario no registrado";
+            return false;
         }
 
     }
