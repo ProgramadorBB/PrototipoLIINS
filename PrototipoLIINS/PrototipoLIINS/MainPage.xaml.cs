@@ -28,7 +28,7 @@ namespace PrototipoLIINS
 
         }
 
-        private void BtnIngresar_Clicked(object sender, EventArgs e)
+        private async void BtnIngresar_Clicked(object sender, EventArgs e)
         {
             lblMensaje.Text = string.Empty;
             Boolean isUsuarioExist = UsuarioRepository.Instancia.AttempLogin(txtEmail.Text, txtContraseña.Text);
@@ -36,7 +36,36 @@ namespace PrototipoLIINS
 
             if (isUsuarioExist.Equals(true))
             {
-                lblMensaje.Text = "usuario correcto";
+                Usuario userSesion = UsuarioRepository.Instancia.userType(txtEmail.Text, txtContraseña.Text);
+
+                if (userSesion.Tipo.Equals("Admin"))
+                {
+
+                    await this.DisplayAlert("Bienvenido", userSesion.Tipo, "Acceder");
+                    Application.Current.Properties["sesion"] = userSesion;
+
+                    txtEmail.Text = string.Empty;
+                    txtContraseña.Text = string.Empty;
+                    await Navigation.PushAsync(new VistaAdmin());
+                }
+                else
+                {
+
+                    if (userSesion.Estado.Equals("bloqueado"))
+                    {
+                        txtEmail.Text = string.Empty;
+                        txtContraseña.Text = string.Empty;
+                        await this.DisplayAlert("Cuenta Bloqueada", "Para más información contactarse con el Administrador", "OK");
+                    }
+                    else
+                    {
+                        await this.DisplayAlert("Bienvenido: ", userSesion.Nombre + " " + userSesion.Apellido, "Acceder");
+                        Application.Current.Properties["sesion"] = userSesion;
+                        txtEmail.Text = string.Empty;
+                        txtContraseña.Text = string.Empty;
+                        await Navigation.PushAsync(new VistaUsuario());
+                    }
+                }
             }
         }
 

@@ -49,6 +49,16 @@
                     Text="Crear Cuenta"
                     HeightRequest="40"
                     Clicked="BtnCrearCuenta_Clicked"/>
+            <Button x:Name="btnVolver"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGoldenrodYellow"
+                    Text="Volver al Login"
+                    HeightRequest="40"
+                    Clicked="BtnVolver_Clicked"/>
 
             <Label Text=""
                    x:Name="lblMensaje"

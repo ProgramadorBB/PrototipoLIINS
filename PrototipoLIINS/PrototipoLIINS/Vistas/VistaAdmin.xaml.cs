@@ -16,5 +16,15 @@ namespace PrototipoLIINS.Vistas
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void OnUpdateUser(object sender, ItemTappedEventArgs e)
+        {
+
+        }
+
+        private void OnDeleteUser(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

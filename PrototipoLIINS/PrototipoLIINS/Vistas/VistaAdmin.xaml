@@ -3,15 +3,110 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrototipoLIINS.Vistas.VistaAdmin">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical"
+        
+        <ScrollView
+            BackgroundColor="DarkSlateGray">
+            <StackLayout Orientation="Vertical"
                      Padding="32"
-                     Spacing="10"
-                     BackgroundColor="LightGray">
-            
-            <Label Text="Admin"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            
-        </StackLayout>
+                     Spacing="10">
+
+                <Label
+                    Text="Menú Administrador"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Opacity="0.8"
+                    BackgroundColor="#545454"
+                    TextColor="LightGoldenrodYellow"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"/>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand">
+
+                    <StackLayout Orientation="Vertical"
+                                 WidthRequest="148">
+
+                        <Button x:Name="btnRegistrarUsuario"
+                        Text="Registrar Usuario"
+                        FontAttributes="Bold"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        TextColor="LightGoldenrodYellow"
+                        FontSize="Micro"
+                        HeightRequest="33"/>
+
+                        <Button x:Name="btnGetAllUsers"
+                        Text="Cargar usuarios"
+                        FontAttributes="Bold"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        TextColor="LightGoldenrodYellow"
+                        FontSize="Micro"
+                        HeightRequest="33"/>
+                    </StackLayout>
+
+                    <Button x:Name="btnCerrarSesion"
+                        Text="Cerrar Sesión"
+                        FontAttributes="Bold"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        TextColor="LightGoldenrodYellow"
+                        FontSize="Micro"
+                        HeightRequest="33"
+                        WidthRequest="62"/>
+
+                </StackLayout>
+
+                <Grid>
+                    <ListView ItemsSource="{Binding}"
+                          ItemTapped="OnUpdateUser">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Clicked="OnDeleteUser"
+                                          CommandParameter="{Binding}"
+                                          Text="Eliminar"                                          
+                                          IsDestructive="True"/>
+                                    </ViewCell.ContextActions>
+                                    <ViewCell.View>
+                                        <StackLayout Orientation="Vertical">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label FontSize="Small" TextColor="DarkRed" Text="{Binding Id}"
+                                                       VerticalTextAlignment="Center"/>
+                                                <Image Source="user.png"
+                                                       WidthRequest="35"
+                                                       VerticalOptions="Center"/>
+                                                <StackLayout Orientation="Vertical">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Tipo}"/>
+                                                        <Label FontSize="Micro" Text="-"/>
+                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Nombre}"/>
+                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Apellido}"/>
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label FontSize="Micro" Text="Correo:"/>
+                                                        <Label FontSize="Micro" Text="{Binding Email}"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell.View>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+
+            </StackLayout>            
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

@@ -170,5 +170,39 @@ namespace PrototipoLIINS.Conexion
             return null;
         }
 
+        public Usuario userType(string email, string contraseña)
+        {
+            var usuario = from u in con.Table<Usuario>()
+                          where u.Email == email && u.Contraseña == contraseña
+                          select u;
+
+            Usuario uTipo = usuario.SingleOrDefault();
+
+            return uTipo;
+
+        }
+
+        public int UpdateUser(Usuario u)
+        {
+            int result = 0;
+
+            try
+            {
+                result = con.Update(u);
+
+                if (result > 0)
+                {
+                    EstadoMensaje = string.Format("Actualizando [Id: {0}]", u.Id);
+                }
+
+            }
+            catch (Exception e)
+            {
+                EstadoMensaje = e.Message;
+            }
+
+            return result;
+        }
+
     }
 }

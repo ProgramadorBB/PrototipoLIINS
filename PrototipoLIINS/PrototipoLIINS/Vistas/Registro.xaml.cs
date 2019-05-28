@@ -19,7 +19,7 @@ namespace PrototipoLIINS.Vistas
 			InitializeComponent ();
 		}
 
-        private void BtnCrearCuenta_Clicked(object sender, EventArgs e)
+        private async void BtnCrearCuenta_Clicked(object sender, EventArgs e)
         {
             lblMensaje.Text = string.Empty;
             lblMensaje.TextColor = Color.DarkRed;
@@ -46,13 +46,23 @@ namespace PrototipoLIINS.Vistas
 
                 if (mensaje.Equals("Constraint"))
                 {
-                    lblMensaje.Text = "El usuario ya se encuentra registrado";
+                    txtEmail.Text = string.Empty;
+                    txtContraseña.Text = string.Empty;
+                    txtNombre.Text = string.Empty;
+                    txtApellido.Text = string.Empty;
+
+                    await this.DisplayAlert("Mensaje", "El usuario ya está registrado", "OK");
                 }
                 else
                 {
                     lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
                 }
             }                
+        }
+
+        private async void BtnVolver_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }
