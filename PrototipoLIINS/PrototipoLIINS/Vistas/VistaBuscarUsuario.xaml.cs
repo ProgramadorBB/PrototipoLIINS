@@ -22,6 +22,30 @@ namespace PrototipoLIINS.Vistas
             pkEstado.Items.Add("Bloqueado");
             pkEstado.SelectedIndex = 0;
 
+            
+        }
+        
+        private void BtnEditarUsuario_Clicked(object sender, EventArgs e)
+        {
+            lblEmail.IsVisible = false;
+            lblContraseña.IsVisible = false;
+            lblNombre.IsVisible = false;
+            lblApellido.IsVisible = false;
+            lblEstado.IsVisible = false;
+
+            txtEmail.IsVisible = true;
+            txtContraseña.IsVisible = true;
+            txtNombre.IsVisible = true;
+            txtApellido.IsVisible = true;
+            pkEstado.IsVisible = true;
+
+
+            btnEditarUsuario.IsVisible = false;
+            btnGuardarCambios.IsVisible = true;
+        }
+
+        private void BtnCargar_Clicked(object sender, EventArgs e)
+        {
             Usuario u = Application.Current.Properties["datos"] as Usuario;
 
             lblEmail.Text = u.Email;
@@ -29,6 +53,13 @@ namespace PrototipoLIINS.Vistas
             lblNombre.Text = u.Nombre;
             lblApellido.Text = u.Apellido;
             lblEstado.Text = u.Estado;
+
+            btnCargar.IsVisible = false;
+            btnEditarUsuario.IsVisible = true;
+        }
+
+        private void BtnGuardarCambios_Clicked(object sender, EventArgs e)
+        {
 
         }
     }

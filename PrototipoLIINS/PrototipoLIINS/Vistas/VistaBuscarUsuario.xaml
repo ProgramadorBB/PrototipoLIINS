@@ -17,8 +17,21 @@
                FontAttributes="Bold"
                HorizontalTextAlignment="Center"/>
 
+            <Button x:Name="btnCargar"
+                        Text="Cargar Datos"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="cargar.png"
+                    Clicked="BtnCargar_Clicked"
+                        />
+
             <StackLayout Orientation="Vertical"
-                         BackgroundColor="DarkGray"                         
+                         BackgroundColor="#545454"                         
                              WidthRequest="100"
                          Padding="5">
                 
@@ -40,8 +53,8 @@
                              HeightRequest="40">
                     <Label Text="Contraseña: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                     <Label x:Name="lblContraseña" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium" />
-                    <Entry x:Name="txtContraseña" FontSize="Micro" TextColor="LightGray" 
-                       Placeholder="Ingrese Contraseña"
+                    <Entry x:Name="txtContraseña" FontSize="Medium" TextColor="LightGray" 
+                       Placeholder="Ingrese Contraseña" PlaceholderColor="LightGray"
                        IsVisible="False"/>
                 </StackLayout>
 
@@ -52,7 +65,7 @@
                              HeightRequest="40">
                     <Label Text="Nombre: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                     <Label x:Name="lblNombre" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
-                    <Entry x:Name="txtNombre" FontSize="Micro" TextColor="LightGray" 
+                    <Entry x:Name="txtNombre" FontSize="Medium" TextColor="LightGray" 
                        Placeholder="Ingrese Nombre" PlaceholderColor="LightGray"
                        IsVisible="False"/>
                 </StackLayout>
@@ -63,7 +76,7 @@
                              HeightRequest="40">
                     <Label Text="Apellido: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                     <Label x:Name="lblApellido" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
-                    <Entry x:Name="txtApellido" FontSize="Micro" TextColor="LightGray" 
+                    <Entry x:Name="txtApellido" FontSize="Medium" TextColor="LightGray" 
                        Placeholder="Ingrese Apellido" PlaceholderColor="LightGray"
                        IsVisible="False"/>
                 </StackLayout>
@@ -80,13 +93,41 @@
                             VerticalOptions="Center"
                         IsVisible="False"
                         Title="Estado"
-                        BackgroundColor="DarkGray"
+                        BackgroundColor="#545454"
                         TextColor="LightGray"
                         />
 
                 </StackLayout>
             </StackLayout>
-            
+
+            <Button x:Name="btnEditarUsuario"
+                        Text="Editar Usuario"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="edituser.png"
+                    IsVisible="False"
+                    Clicked="BtnEditarUsuario_Clicked"
+                        />
+
+            <Button x:Name="btnGuardarCambios"
+                        Text="Guardar cambios"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="guardar.png"
+                    IsVisible="False"
+                    Clicked="BtnGuardarCambios_Clicked"
+                        />
+
 
             <Label Text=""
                x:Name="lblMensaje"
