@@ -41,7 +41,20 @@ namespace PrototipoLIINS.Vistas
 
             foreach (Usuario user in allUsers)
                 if (users.All(u => u.Id != user.Id))
+                {
+                    if(user.Tipo.Equals("Usuario"))                
                     users.Add(user);
+                }
+        }
+
+        private void EliminarUsuario_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditarUsuario_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,7 +35,7 @@
                 BorderColor="#353535"
                 BackgroundColor="#545454"
                 FontAttributes="Bold"
-                TextColor="LightGoldenrodYellow"
+                TextColor="LightGray"
                 Text="Ingresar"
                 HeightRequest="40"
                 Clicked="BtnIngresar_Clicked"/>
@@ -47,7 +47,7 @@
                 BorderColor="#353535"
                 BackgroundColor="#545454"
                 FontAttributes="Bold"
-                TextColor="LightGoldenrodYellow"                
+                TextColor="LightGray"                
                 HeightRequest="40"
                 Clicked="BtnRegistrarCuenta_Clicked"/>
 

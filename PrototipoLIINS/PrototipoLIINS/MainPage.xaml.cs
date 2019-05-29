@@ -17,6 +17,7 @@ namespace PrototipoLIINS
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             Application.Current.Properties.Clear();
+            lblMensaje.Text = string.Empty;
 
             string admin = "Admin";
             Usuario buscarAdmin = UsuarioRepository.Instancia.BuscarUsuario(admin);
@@ -40,7 +41,7 @@ namespace PrototipoLIINS
 
                 if (userSesion.Tipo.Equals("Admin"))
                 {
-
+                    lblMensaje.Text = string.Empty;
                     await this.DisplayAlert("Bienvenido", userSesion.Tipo, "Acceder");
                     Application.Current.Properties["sesion"] = userSesion;
 

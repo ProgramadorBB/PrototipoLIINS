@@ -7,7 +7,7 @@
         <ScrollView
             BackgroundColor="LightGray">
             <StackLayout Orientation="Vertical"
-                     Padding="32"
+                     Padding="25"
                      BackgroundColor="LightGray"
                      Spacing="10">
 
@@ -16,25 +16,10 @@
                     FontSize="Large"
                     FontAttributes="Bold"
                     Opacity="0.8"
-                    BackgroundColor="#545454"
-                    TextColor="LightGoldenrodYellow"
+                    BackgroundColor="#4E4E4E"
+                    TextColor="LightGray"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"/>
-
-                <StackLayout Orientation="Horizontal"
-                             HorizontalOptions="CenterAndExpand">
-
-                    <StackLayout Orientation="Vertical">
-
-                        <Button x:Name="btnRegistrarUsuario"
-                                Text="Registrar Usuario"
-                                BorderRadius="10"
-                                BorderWidth="2"
-                                BorderColor="#353535"
-                                BackgroundColor="#545454"
-                                FontAttributes="Bold"
-                                TextColor="LightGoldenrodYellow"                
-                                HeightRequest="40"/>
 
                         <Button x:Name="btnGetAllUser"
                                 Text="Mostrar Lista de Usuarios"
@@ -43,21 +28,38 @@
                                 BorderColor="#353535"
                                 BackgroundColor="#545454"
                                 FontAttributes="Bold"
-                                TextColor="LightGoldenrodYellow"                
+                                TextColor="LightGray"                
                                 HeightRequest="40"
                                 Clicked="BtnGetAllUser_Clicked"/>
-                    </StackLayout>
 
-                    <Button x:Name="btnCerrarSesion"
-                        Text="Cerrar Sesión"
-                        FontAttributes="Bold"
-                        BorderRadius="10"
-                        BorderWidth="2"
-                        BorderColor="#353535"
-                        BackgroundColor="#545454"
-                        TextColor="LightGoldenrodYellow"
-                        HeightRequest="40"/>
-
+                        <StackLayout Orientation="Horizontal">
+                            <ImageButton x:Name="buscarUsuario"                                                        
+                                         HeightRequest="30"
+                                         BorderColor="#353535"
+                                         BorderWidth="2"
+                                         Padding="3"
+                                         Source="buscar.png"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="CenterAndExpand"/>
+                            <Entry x:Name="txtBuscar" 
+                                   Placeholder="Buscar Usuario"
+                                   HorizontalOptions="CenterAndExpand"/>
+                            <ImageButton x:Name="btnInformación"   
+                                         HeightRequest="40"
+                                         Source="info.png"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="Center"/>
+                            <Button x:Name="btnCerrarSesion"
+                                    Text="Cerrar Sesión"
+                                    BorderRadius="10"
+                                    BorderWidth="2"
+                                    BorderColor="#353535"
+                                    BackgroundColor="#545454"
+                                    FontAttributes="Bold"
+                                    FontSize="Micro"
+                                    ImageSource="cerrar.png"
+                                    TextColor="LightGray"
+                                    HeightRequest="40"/>
                 </StackLayout>
 
                 <Grid>
@@ -92,6 +94,38 @@
                                                         <Label FontSize="Micro" Text="{Binding Email}"/>
                                                     </StackLayout>
                                                 </StackLayout>
+                                                <StackLayout Orientation="Horizontal"
+                                                             HorizontalOptions="EndAndExpand"
+                                                             Padding="2"
+                                                    >
+                                                    <StackLayout Orientation="Vertical">                                                        
+                                                        <ImageButton x:Name="editarUsuario"
+                                                                     HeightRequest="24"
+                                                                     Source="edit.png"
+                                                                     VerticalOptions="End"
+                                                                     HorizontalOptions="Center"
+                                                                     Clicked="EditarUsuario_Clicked"/>
+                                                        <Label FontSize="Micro" Text="Editar"
+                                                               TextColor="#545454"
+                                                               FontAttributes="Bold"
+                                                               HorizontalOptions="Center"
+                                                               VerticalTextAlignment="Center"/>
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Vertical">                                                        
+                                                        <ImageButton x:Name="EliminarUsuario"                                                        
+                                                                 HeightRequest="24"
+                                                                 Source="delete.png"
+                                                                 VerticalOptions="Center"
+                                                                 HorizontalOptions="Center"                                                           
+                                                                 Clicked="EliminarUsuario_Clicked"/>
+                                                        <Label FontSize="Micro" Text="Eliminar"
+                                                               TextColor="#545454"
+                                                               FontAttributes="Bold"
+                                                               HorizontalOptions="Center"
+                                                               VerticalTextAlignment="Center"/>
+                                                    </StackLayout>                                             
+                                                </StackLayout>
+                                                
                                             </StackLayout>
                                         </StackLayout>
                                     </ViewCell.View>
@@ -101,6 +135,8 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </Grid>
+
+                
 
             </StackLayout>            
         </ScrollView>
