@@ -14,33 +14,88 @@
                 <Label
                     Text="Menú Administrador"
                     FontSize="Large"
-                    FontAttributes="Bold"
-                    Opacity="0.8"
                     BackgroundColor="#4E4E4E"
-                    TextColor="LightGray"
+                    FontAttributes="Bold"   
+                    TextColor="LightGray"  
+                    VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"/>
+                
 
-                        <Button x:Name="btnGetAllUser"
-                                Text="Mostrar Lista de Usuarios"
-                                BorderRadius="10"
-                                BorderWidth="2"
-                                BorderColor="#353535"
-                                BackgroundColor="#545454"
-                                FontAttributes="Bold"
-                                TextColor="LightGray"                
-                                HeightRequest="40"
-                                Clicked="BtnGetAllUser_Clicked"/>
+                <Button x:Name="btnInstrucciones"
+                        Text="Ver Instrucciones de Uso"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="instrucciones.png"
+                        Clicked="BtnInstrucciones_Clicked"
+                        />
+                <Button x:Name="btnTerminosLegales"
+                        Text="Ver Terminos legales"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="legales.png"
+                        Clicked="BtnTerminosLegales_Clicked"
+                        />                
 
-                        <StackLayout Orientation="Horizontal">
-                            <ImageButton x:Name="buscarUsuario"                                                        
+                <Button x:Name="btnKpiConsumo"
+                        Text="Indicador De Consumo Acumulado"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="kpi.png"
+                        Clicked="BtnKpiConsumo_Clicked"
+                    />
+
+                <Button x:Name="btnLiquidoPopular"
+                        Text="Ver Liquido más Popular"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="liquido.png"
+                        Clicked="BtnLiquidoPopular_Clicked"
+                        />
+
+                <Button x:Name="btnGetAllUser"
+                        Text="Mostrar Lista de Usuarios"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="lista.png"
+                        Clicked="BtnGetAllUser_Clicked"/>
+
+                        <StackLayout Orientation="Horizontal"
+                                     >
+                            <ImageButton x:Name="btnBuscarUsuario"                                                        
                                          HeightRequest="30"
                                          BorderColor="#353535"
                                          BorderWidth="2"
                                          Padding="3"
                                          Source="buscar.png"
                                          VerticalOptions="Center"
-                                         HorizontalOptions="CenterAndExpand"/>
+                                         HorizontalOptions="CenterAndExpand"
+                                         Clicked="BtnBuscarUsuario_Clicked"/>
                             <Entry x:Name="txtBuscar" 
                                    Placeholder="Buscar Usuario"
                                    HorizontalOptions="CenterAndExpand"/>
@@ -48,7 +103,8 @@
                                          HeightRequest="40"
                                          Source="info.png"
                                          VerticalOptions="Center"
-                                         HorizontalOptions="Center"/>
+                                         HorizontalOptions="Center"
+                                         Clicked="BtnInformación_Clicked"/>
                             <Button x:Name="btnCerrarSesion"
                                     Text="Cerrar Sesión"
                                     BorderRadius="10"
@@ -62,7 +118,7 @@
                                     HeightRequest="40"/>
                 </StackLayout>
 
-                <Grid>
+                <Grid x:Name="grLista">
                     <ListView ItemsSource="{Binding}"
                           ItemTapped="OnUpdateUser">
                         <ListView.ItemTemplate>
@@ -99,12 +155,12 @@
                                                              Padding="2"
                                                     >
                                                     <StackLayout Orientation="Vertical">                                                        
-                                                        <ImageButton x:Name="editarUsuario"
+                                                        <ImageButton x:Name="btnEditarUsuario"
                                                                      HeightRequest="24"
                                                                      Source="edit.png"
                                                                      VerticalOptions="End"
                                                                      HorizontalOptions="Center"
-                                                                     Clicked="EditarUsuario_Clicked"/>
+                                                                     Clicked="BtnEditarUsuario_Clicked"/>
                                                         <Label FontSize="Micro" Text="Editar"
                                                                TextColor="#545454"
                                                                FontAttributes="Bold"
@@ -112,12 +168,12 @@
                                                                VerticalTextAlignment="Center"/>
                                                     </StackLayout>
                                                     <StackLayout Orientation="Vertical">                                                        
-                                                        <ImageButton x:Name="EliminarUsuario"                                                        
-                                                                 HeightRequest="24"
-                                                                 Source="delete.png"
-                                                                 VerticalOptions="Center"
-                                                                 HorizontalOptions="Center"                                                           
-                                                                 Clicked="EliminarUsuario_Clicked"/>
+                                                        <ImageButton x:Name="btnEliminarUsuario"                                                        
+                                                                     HeightRequest="24"
+                                                                     Source="delete.png"
+                                                                     VerticalOptions="Center"
+                                                                     HorizontalOptions="Center"
+                                                                     Clicked="BtnEliminarUsuario_Clicked"/>
                                                         <Label FontSize="Micro" Text="Eliminar"
                                                                TextColor="#545454"
                                                                FontAttributes="Bold"

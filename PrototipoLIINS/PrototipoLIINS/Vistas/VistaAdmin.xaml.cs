@@ -36,23 +36,71 @@ namespace PrototipoLIINS.Vistas
 
         private void BtnGetAllUser_Clicked(object sender, EventArgs e)
         {
-            var allUsers = UsuarioRepository.Instancia.GetAllUsuarios();
+            string btnText = btnGetAllUser.Text;
 
+            if(btnText == "Mostrar Lista de Usuarios")
+            {
+                var allUsers = UsuarioRepository.Instancia.GetAllUsuarios();
 
-            foreach (Usuario user in allUsers)
-                if (users.All(u => u.Id != user.Id))
-                {
-                    if(user.Tipo.Equals("Usuario"))                
-                    users.Add(user);
-                }
+                foreach (Usuario user in allUsers)
+                    if (users.All(u => u.Id != user.Id))
+                    {
+                        if (user.Tipo.Equals("Usuario"))
+                            users.Add(user);
+                    }
+                grLista.IsVisible = true;
+                btnGetAllUser.ImageSource = "backlista.png";
+                btnGetAllUser.Text = "Ocultar Lista de Usuarios";
+            }
+            else
+            {
+                grLista.IsVisible = false;
+                btnGetAllUser.ImageSource = "lista.png";
+                btnGetAllUser.Text = "Mostrar Lista de Usuarios";
+            }
         }
 
-        private void EliminarUsuario_Clicked(object sender, EventArgs e)
+        private void BtnEditarUsuario_Clicked(object sender, EventArgs e)
         {
 
         }
 
-        private void EditarUsuario_Clicked(object sender, EventArgs e)
+        private void BtnEliminarUsuario_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBuscarUsuario_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void BtnInformación_Clicked(object sender, EventArgs e)
+        {
+            await this.DisplayAlert("Información: ","Para buscar un usuario debe ingresar el E-mail del Usuario", "OK");
+        }
+
+        private void BtnInstrucciones_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnTerminosLegales_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnReglamento_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnKpiConsumo_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnLiquidoPopular_Clicked(object sender, EventArgs e)
         {
 
         }
