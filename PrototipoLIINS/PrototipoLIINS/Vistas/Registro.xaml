@@ -45,7 +45,7 @@
                     BorderColor="#353535"
                     BackgroundColor="#545454"
                     FontAttributes="Bold"
-                    TextColor="LightGoldenrodYellow"
+                    TextColor="LightGray"
                     Text="Crear Cuenta"
                     HeightRequest="40"
                     Clicked="BtnCrearCuenta_Clicked"/>
@@ -55,7 +55,7 @@
                     BorderColor="#353535"
                     BackgroundColor="#545454"
                     FontAttributes="Bold"
-                    TextColor="LightGoldenrodYellow"
+                    TextColor="LightGray"
                     Text="Volver al Login"
                     HeightRequest="40"
                     Clicked="BtnVolver_Clicked"/>

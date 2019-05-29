@@ -145,5 +145,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\backlista.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ubuscado.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

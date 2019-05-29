@@ -29,9 +29,22 @@ namespace PrototipoLIINS.Vistas
 
         }
 
-        private void OnDeleteUser(object sender, EventArgs e)
+        private async void OnDeleteUser(object sender, EventArgs e)
         {
+            MenuItem item = (MenuItem)sender;
+            Usuario user = (Usuario)item.CommandParameter;
 
+            if (user != null)
+            {
+                if (await this.DisplayAlert("¿Borrar usuario [id: " + user.Id + "]?",
+                    "El usuario [" + user.Nombre + " " + user.Apellido + "] Se eliminara de forma permanente",
+                    "Eliminar usuario",
+                    "Cancelar") == true)
+                {
+                    UsuarioRepository.Instancia.DeleteUsuario(user.Id);
+                    users.Remove(user);
+                }
+            }
         }
 
         private void BtnGetAllUser_Clicked(object sender, EventArgs e)
@@ -60,19 +73,31 @@ namespace PrototipoLIINS.Vistas
             }
         }
 
-        private void BtnEditarUsuario_Clicked(object sender, EventArgs e)
+        private async void BtnEditarUsuario_Clicked(object sender, EventArgs e)
         {
-
+            await this.DisplayAlert("En Desarrollo: ", "Esta función estara disponible en una proxima entrega", "OK");
         }
 
-        private void BtnEliminarUsuario_Clicked(object sender, EventArgs e)
+        private async void BtnEliminarUsuario_Clicked(object sender, EventArgs e)
         {
 
+            await this.DisplayAlert("En Desarrollo: ", "Esta función estara disponible en una proxima entrega", "OK");
         }
 
-        private void BtnBuscarUsuario_Clicked(object sender, EventArgs e)
+        private async void BtnBuscarUsuario_Clicked(object sender, EventArgs e)
         {
-
+            string uBuscado = txtBuscar.Text;
+            txtBuscar.Text = "";
+            if(UsuarioRepository.Instancia.BuscarUsuario(uBuscado) != null)
+            {
+                Usuario u = UsuarioRepository.Instancia.BuscarUsuario(uBuscado);
+                Application.Current.Properties["datos"] = u;
+                await Navigation.PushAsync(new VistaBuscarUsuario() { Title = "Volver al Menú" });
+            }
+            else
+            {
+                await this.DisplayAlert("Resultados de la busqueda:", "No existen coincidencias", "Aceptar");
+            }
         }
 
         private async void BtnInformación_Clicked(object sender, EventArgs e)

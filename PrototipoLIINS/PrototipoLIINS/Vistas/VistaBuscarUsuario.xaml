@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrototipoLIINS.Vistas.VistaBuscarUsuario">
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical"
+                 Padding="22"
+                 BackgroundColor="LightGray"
+                 Spacing="10">
+
+            <Image WidthRequest="128"
+               Source="ubuscado.png"/>
+
+            <Label Text="¡Usuario Encontrado!" 
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"/>
+
+            <StackLayout Orientation="Vertical"
+                         BackgroundColor="DarkGray"                         
+                             WidthRequest="100"
+                         Padding="5">
+                
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40"
+                             >
+                    <Label Text="E-mail: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                    <Label x:Name="lblEmail" Text="" TextColor="LightGray" VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Entry x:Name="txtEmail" FontSize="Medium" TextColor="LightGray" 
+                       Placeholder="Ingrese Email" PlaceholderColor="LightGray"                           
+                       IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40">
+                    <Label Text="Contraseña: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                    <Label x:Name="lblContraseña" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium" />
+                    <Entry x:Name="txtContraseña" FontSize="Micro" TextColor="LightGray" 
+                       Placeholder="Ingrese Contraseña"
+                       IsVisible="False"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40">
+                    <Label Text="Nombre: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                    <Label x:Name="lblNombre" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Entry x:Name="txtNombre" FontSize="Micro" TextColor="LightGray" 
+                       Placeholder="Ingrese Nombre" PlaceholderColor="LightGray"
+                       IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40">
+                    <Label Text="Apellido: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                    <Label x:Name="lblApellido" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Entry x:Name="txtApellido" FontSize="Micro" TextColor="LightGray" 
+                       Placeholder="Ingrese Apellido" PlaceholderColor="LightGray"
+                       IsVisible="False"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40">
+                    <Label Text="Estado: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                    <Label x:Name="lblEstado" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Picker x:Name="pkEstado"
+                            TitleColor="LightGray"
+                            HeightRequest="40"
+                            VerticalOptions="Center"
+                        IsVisible="False"
+                        Title="Estado"
+                        BackgroundColor="DarkGray"
+                        TextColor="LightGray"
+                        />
+
+                </StackLayout>
+            </StackLayout>
+            
+
+            <Label Text=""
+               x:Name="lblMensaje"
+               FontSize="Medium"
+                   TextColor="DarkRed"
+               HorizontalTextAlignment="Center"/>
+
+            <Label Text="Developed by: B.P.S. Solutions S.A.®"
+                   VerticalOptions="End"
+               FontSize="Medium"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

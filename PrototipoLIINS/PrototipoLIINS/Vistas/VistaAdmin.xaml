@@ -168,12 +168,14 @@
                                                                HorizontalOptions="Center"
                                                                VerticalTextAlignment="Center"/>
                                                     </StackLayout>
-                                                    <StackLayout Orientation="Vertical">                                                        
-                                                        <ImageButton x:Name="btnEliminarUsuario"                                                        
+                                                    <StackLayout Orientation="Vertical">
+                                                        
+                                                        <ImageButton x:Name="btnEliminarUsuario"                                                                   
                                                                      HeightRequest="24"
                                                                      Source="delete.png"
                                                                      VerticalOptions="Center"
                                                                      HorizontalOptions="Center"
+                                                                     CommandParameter="{Binding}"
                                                                      Clicked="BtnEliminarUsuario_Clicked"/>
                                                         <Label FontSize="Micro" Text="Eliminar"
                                                                TextColor="#545454"
