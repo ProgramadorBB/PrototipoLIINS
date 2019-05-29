@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrototipoLIINS.Vistas.VistaInstrucciones">
+    <ContentPage.Content>
+        
+        <ScrollView
+            BackgroundColor="LightGray">
+            <StackLayout Orientation="Vertical"
+                     Padding="22"
+                     BackgroundColor="LightGray"
+                     Spacing="10">
+
+                <Label Text="Instruciones de Uso"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
+
+                <Label Text="Paso a Paso. (EN DESARROLLO LA REDACCIÓN)"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <Label Text="1) blabla blallbllalb llal bllalblalblal "
+                       FontSize="Micro"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                    />
+                <Label Text="2) blabla blallbllalb llal bllalblalblal "
+                       FontSize="Micro"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                    />
+                <Label Text="3) blabla blallbllalb llal bllalblalblal "
+                       FontSize="Micro"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                    />
+                <Label Text="4) blabla blallbllalb llal bllalblalblal "
+                       FontSize="Micro"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                    />
+                <Label Text="5) blabla blallbllalb llal bllalblalblal "
+                       FontSize="Micro"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                    />
+                <Label Text="6) blabla blallbllalb llal bllalblalblal "
+                       FontSize="Micro"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                    />
+                <Label Text="7) blabla blallbllalb llal bllalblalblal "
+                       FontSize="Micro"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                    />
+                <Label Text="N°...) blabla blallbllalb llal bllalblalblal "
+                       FontSize="Micro"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       VerticalOptions="Center"
+                    />
+                
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

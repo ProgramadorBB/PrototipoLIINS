@@ -80,29 +80,29 @@ namespace PrototipoLIINS.Vistas
             await this.DisplayAlert("Información: ","Para buscar un usuario debe ingresar el E-mail del Usuario", "OK");
         }
 
-        private void BtnInstrucciones_Clicked(object sender, EventArgs e)
+        private async void BtnInstrucciones_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VistaInstrucciones() { Title = "Volver al Menú" });
         }
 
-        private void BtnTerminosLegales_Clicked(object sender, EventArgs e)
+        private async void BtnTerminosLegales_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VistaLegal() {  Title = "Volver al Menú" });
         }
 
-        private void BtnReglamento_Clicked(object sender, EventArgs e)
+        private async void BtnKpiConsumo_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VistaKpi() { Title = "Volver al Menú" });
         }
 
-        private void BtnKpiConsumo_Clicked(object sender, EventArgs e)
+        private async void BtnLiquidoPopular_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VistaLiquidoPopular() { Title = "Volver al Menú" });
         }
 
-        private void BtnLiquidoPopular_Clicked(object sender, EventArgs e)
+        private async void BtnCerrarSesion_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PopToRootAsync();
         }
     }
 }

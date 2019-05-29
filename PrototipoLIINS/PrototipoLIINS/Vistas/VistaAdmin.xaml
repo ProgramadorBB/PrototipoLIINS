@@ -115,7 +115,8 @@
                                     FontSize="Micro"
                                     ImageSource="cerrar.png"
                                     TextColor="LightGray"
-                                    HeightRequest="40"/>
+                                    HeightRequest="40"
+                                    Clicked="BtnCerrarSesion_Clicked"/>
                 </StackLayout>
 
                 <Grid x:Name="grLista">
