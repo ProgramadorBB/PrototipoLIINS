@@ -29,7 +29,7 @@
                FontSize="Medium"
                FontAttributes="Italic"/>
 
-        <Button x:Name="BtnIngresar"            
+        <Button x:Name="btnIngresar"            
                 BorderRadius="10"
                 BorderWidth="2"
                 BorderColor="#353535"
@@ -38,7 +38,7 @@
                 TextColor="LightGray"
                 Text="Ingresar"
                 HeightRequest="40"
-                Clicked="BtnIngresar_Clicked"/>
+                Clicked="btnIngresar_Clicked"/>
 
         <Button x:Name="btnRegistrarCuenta"
                 Text="Registro"

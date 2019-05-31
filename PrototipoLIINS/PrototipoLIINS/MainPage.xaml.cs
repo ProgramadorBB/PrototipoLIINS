@@ -29,7 +29,7 @@ namespace PrototipoLIINS
 
         }
 
-        private async void BtnIngresar_Clicked(object sender, EventArgs e)
+        private async void btnIngresar_Clicked(object sender, EventArgs e)
         {
             lblMensaje.Text = string.Empty;
             Boolean isUsuarioExist = UsuarioRepository.Instancia.AttempLogin(txtEmail.Text, txtContraseña.Text);

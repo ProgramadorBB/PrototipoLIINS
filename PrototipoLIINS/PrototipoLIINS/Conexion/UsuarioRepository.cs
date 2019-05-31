@@ -179,7 +179,6 @@ namespace PrototipoLIINS.Conexion
             Usuario uTipo = usuario.SingleOrDefault();
 
             return uTipo;
-
         }
 
         public int UpdateUser(Usuario u)
