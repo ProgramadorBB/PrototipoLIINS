@@ -84,20 +84,14 @@ namespace PrototipoLIINS.Vistas
             await this.DisplayAlert("En Desarrollo: ", "Esta función estara disponible en una proxima entrega", "OK");
         }
 
-        private async void BtnBuscarUsuario_Clicked(object sender, EventArgs e)
+        private void BtnBuscarUsuario_Clicked(object sender, EventArgs e)
         {
-            string uBuscado = txtBuscar.Text;
-            txtBuscar.Text = "";
-            if(UsuarioRepository.Instancia.BuscarUsuario(uBuscado) != null)
-            {
-                Usuario u = UsuarioRepository.Instancia.BuscarUsuario(uBuscado);
-                Application.Current.Properties["datos"] = u;
-                await Navigation.PushAsync(new VistaBuscarUsuario() { Title = "Volver al Menú" });
-            }
-            else
-            {
-                await this.DisplayAlert("Resultados de la busqueda:", "No existen coincidencias", "Aceptar");
-            }
+            txtBuscar.IsVisible = true;
+            btnBuscar.IsVisible = true;
+            btnInformación.IsVisible = true;
+
+            btnCerrarSesion.IsVisible = false;            
+            btnBuscarUsuario.IsVisible = false;
         }
 
         private async void BtnInformación_Clicked(object sender, EventArgs e)
@@ -128,6 +122,31 @@ namespace PrototipoLIINS.Vistas
         private async void BtnCerrarSesion_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
+        }
+
+        private async void BtnBuscar_Clicked(object sender, EventArgs e)
+        {
+            btnBuscarUsuario.IsVisible = true;
+            btnCerrarSesion.IsVisible = true;
+
+            txtBuscar.IsVisible = false;
+            btnBuscar.IsVisible = false;
+            btnInformación.IsVisible = false;
+
+
+            string uBuscado = txtBuscar.Text;
+            txtBuscar.Text = "";
+            if (UsuarioRepository.Instancia.BuscarUsuario(uBuscado) != null)
+            {
+                Usuario u = UsuarioRepository.Instancia.BuscarUsuario(uBuscado);
+                Application.Current.Properties["datos"] = u;
+                await Navigation.PushAsync(new VistaBuscarUsuario() { Title = "Volver al Menú" });
+            }
+            else
+            {
+                await this.DisplayAlert("Resultados de la busqueda:", "No existen coincidencias", "Aceptar");
+            }
+
         }
     }
 }

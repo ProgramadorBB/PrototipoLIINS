@@ -86,25 +86,47 @@
                         Clicked="BtnGetAllUser_Clicked"/>
 
                         <StackLayout Orientation="Horizontal"
+                                     HeightRequest="40"
                                      >
-                            <ImageButton x:Name="btnBuscarUsuario"                                                        
-                                         HeightRequest="30"
-                                         BorderColor="#353535"
-                                         BorderWidth="2"
-                                         Padding="3"
-                                         Source="buscar.png"
-                                         VerticalOptions="Center"
-                                         HorizontalOptions="CenterAndExpand"
+                            <Button x:Name="btnBuscarUsuario"      
+                                         Text="Buscar Usuario"
+                                    BorderRadius="10"
+                                    BorderWidth="2"
+                                    BorderColor="#353535"
+                                    BackgroundColor="#545454"
+                                    FontAttributes="Bold"
+                                    ImageSource="buscar.png"
+                                    TextColor="LightGray"
+                                    HeightRequest="40"
+                                    HorizontalOptions="FillAndExpand"
                                          Clicked="BtnBuscarUsuario_Clicked"/>
-                            <Entry x:Name="txtBuscar" 
-                                   Placeholder="Buscar Usuario"
-                                   HorizontalOptions="CenterAndExpand"/>
-                            <ImageButton x:Name="btnInformación"   
+
+                    <ImageButton x:Name="btnInformación"   
                                          HeightRequest="40"
                                          Source="info.png"
                                          VerticalOptions="Center"
                                          HorizontalOptions="Center"
+                                 IsVisible="False"
                                          Clicked="BtnInformación_Clicked"/>
+
+                    <Entry x:Name="txtBuscar" 
+                                   Placeholder="Buscar Usuario"
+                                   HorizontalOptions="FillAndExpand"
+                                   IsVisible="False"/>
+
+                    <Button x:Name="btnBuscar"
+                            Text="Buscar"
+                                    BorderRadius="10"
+                                    BorderWidth="2"
+                                    BorderColor="#353535"
+                                    BackgroundColor="#545454"
+                                    FontAttributes="Bold"
+                                    TextColor="LightGray"
+                                    HeightRequest="40"
+                            IsVisible="False"
+                            Clicked="BtnBuscar_Clicked"
+                        />
+                    
                             <Button x:Name="btnCerrarSesion"
                                     Text="Cerrar Sesión"
                                     BorderRadius="10"
@@ -112,10 +134,10 @@
                                     BorderColor="#353535"
                                     BackgroundColor="#545454"
                                     FontAttributes="Bold"
-                                    FontSize="Micro"
                                     ImageSource="cerrar.png"
                                     TextColor="LightGray"
                                     HeightRequest="40"
+                                    HorizontalOptions="EndAndExpand"
                                     Clicked="BtnCerrarSesion_Clicked"/>
                 </StackLayout>
 
