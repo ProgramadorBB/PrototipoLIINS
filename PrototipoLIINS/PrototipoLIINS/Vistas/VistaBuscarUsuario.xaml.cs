@@ -69,8 +69,24 @@ namespace PrototipoLIINS.Vistas
             btnEliminarUsuario.IsVisible = true;
         }
 
-        private void BtnGuardarCambios_Clicked(object sender, EventArgs e)
+        private async void BtnGuardarCambios_Clicked(object sender, EventArgs e)
         {
+            Usuario u = Application.Current.Properties["datos"] as Usuario;
+            u.Nombre = txtNombre.Text;
+            u.Apellido = txtApellido.Text;
+            u.Contraseña = txtContraseña.Text;
+            u.Email = txtEmail.Text;
+            u.Estado = pkEstado.SelectedItem.ToString();
+
+            if (await this.DisplayAlert("¿Guardar cambios del Usuario?",
+                    "IMPORTANTE: Los datos se cambiaran de forma permanente",
+                    "Guardar",
+                    "Cancelar") == true)
+            {
+                UsuarioRepository.Instancia.UpdateUser(u);
+                await this.DisplayAlert("LIINS: ", "Usuario actualizado en la base de datos", "Aceptar");
+                await Navigation.PushAsync(new VistaAdmin());
+            }
 
         }
 
@@ -79,7 +95,7 @@ namespace PrototipoLIINS.Vistas
             Usuario u = Application.Current.Properties["datos"] as Usuario;
 
             if (await this.DisplayAlert("¿Borrar usuario [id: " + u.Id + "]?",
-                    "El usuario [" + u.Nombre + " " + u.Apellido + "] Se eliminara de forma permanente",
+                    "IMPORTANTE: El usuario [" + u.Nombre + " " + u.Apellido + "] Se eliminara de forma permanente",
                     "Eliminar usuario",
                     "Cancelar") == true)
             {
