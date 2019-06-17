@@ -84,6 +84,8 @@ namespace PrototipoLIINS.Vistas
                     "Cancelar") == true)
             {
                 UsuarioRepository.Instancia.DeleteUsuario(u.Id);
+                await this.DisplayAlert("LIINS: ", "Usuario eliminado de la base de datos", "Aceptar");
+                await Navigation.PushAsync(new VistaAdmin());
             }
         }
     }

@@ -72,7 +72,7 @@ namespace PrototipoLIINS
 
         private async void BtnRegistrarCuenta_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Registro() { Title = "Registro LIINS"});
+            await Navigation.PushAsync(new Registro() { Title = "Volver"});
         }
     }
 }

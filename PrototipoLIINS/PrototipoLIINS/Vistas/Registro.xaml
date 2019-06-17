@@ -48,17 +48,7 @@
                     TextColor="LightGray"
                     Text="Crear Cuenta"
                     HeightRequest="40"
-                    Clicked="BtnCrearCuenta_Clicked"/>
-            <Button x:Name="btnVolver"
-                    BorderRadius="10"
-                    BorderWidth="2"
-                    BorderColor="#353535"
-                    BackgroundColor="#545454"
-                    FontAttributes="Bold"
-                    TextColor="LightGray"
-                    Text="Volver al Login"
-                    HeightRequest="40"
-                    Clicked="BtnVolver_Clicked"/>
+                    Clicked="BtnCrearCuenta_Clicked"/>            
 
             <Label Text=""
                    x:Name="lblMensaje"
@@ -67,7 +57,7 @@
                    HorizontalTextAlignment="Center"/>
 
             <Label Text="Developed by: B.P.S. Solutions S.A.®"
-                   FontSize="Medium"
+                   FontSize="Micro"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"/>
 

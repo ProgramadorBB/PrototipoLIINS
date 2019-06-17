@@ -55,14 +55,11 @@ namespace PrototipoLIINS.Vistas
                 }
                 else
                 {
-                    lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
+                    await this.DisplayAlert("Mensaje:", "El Usuario se ha registrado correctamente en la base de datos LIINS", "Aceptar");
+                    await this.Navigation.PopToRootAsync();
                 }
             }                
         }
 
-        private async void BtnVolver_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new MainPage());
-        }
     }
 }

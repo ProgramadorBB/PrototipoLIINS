@@ -28,7 +28,7 @@ namespace PrototipoLIINS.Vistas
         {
             Usuario u = (Usuario)e.Item;
             Application.Current.Properties["datos"] = u;
-            await Navigation.PushAsync(new VistaBuscarUsuario() { Title = "Volver al Menú" });
+            await Navigation.PushAsync(new VistaBuscarUsuario() { Title = "Volver" });
 
             //await Navigation.PushAsync(new VistaBuscarUsuario());
         }
@@ -127,7 +127,7 @@ namespace PrototipoLIINS.Vistas
             {
                 Usuario u = UsuarioRepository.Instancia.BuscarUsuario(uBuscado);
                 Application.Current.Properties["datos"] = u;
-                await Navigation.PushAsync(new VistaBuscarUsuario() { Title = "Volver al Menú" });
+                await Navigation.PushAsync(new VistaBuscarUsuario() { Title = "Volver" });
             }
             else
             {
