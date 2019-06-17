@@ -24,9 +24,13 @@ namespace PrototipoLIINS.Vistas
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private void OnUpdateUser(object sender, ItemTappedEventArgs e)
+        private async void OnUpdateUser(object sender, ItemTappedEventArgs e)
         {
+            Usuario u = (Usuario)e.Item;
+            Application.Current.Properties["datos"] = u;
+            await Navigation.PushAsync(new VistaBuscarUsuario() { Title = "Volver al Menú" });
 
+            //await Navigation.PushAsync(new VistaBuscarUsuario());
         }
 
         private async void OnDeleteUser(object sender, EventArgs e)
@@ -73,17 +77,7 @@ namespace PrototipoLIINS.Vistas
             }
         }
 
-        private async void BtnEditarUsuario_Clicked(object sender, EventArgs e)
-        {
-            await this.DisplayAlert("En Desarrollo: ", "Esta función estara disponible en una proxima entrega", "OK");
-        }
-
-        private async void BtnEliminarUsuario_Clicked(object sender, EventArgs e)
-        {
-
-            await this.DisplayAlert("En Desarrollo: ", "Esta función estara disponible en una proxima entrega", "OK");
-        }
-
+        
         private void BtnBuscarUsuario_Clicked(object sender, EventArgs e)
         {
             txtBuscar.IsVisible = true;
@@ -126,14 +120,7 @@ namespace PrototipoLIINS.Vistas
 
         private async void BtnBuscar_Clicked(object sender, EventArgs e)
         {
-            btnBuscarUsuario.IsVisible = true;
-            btnCerrarSesion.IsVisible = true;
-
-            txtBuscar.IsVisible = false;
-            btnBuscar.IsVisible = false;
-            btnInformación.IsVisible = false;
-
-
+            
             string uBuscado = txtBuscar.Text;
             txtBuscar.Text = "";
             if (UsuarioRepository.Instancia.BuscarUsuario(uBuscado) != null)
@@ -144,6 +131,13 @@ namespace PrototipoLIINS.Vistas
             }
             else
             {
+                btnBuscarUsuario.IsVisible = true;
+                btnCerrarSesion.IsVisible = true;
+
+                txtBuscar.IsVisible = false;
+                btnBuscar.IsVisible = false;
+                btnInformación.IsVisible = false;
+
                 await this.DisplayAlert("Resultados de la busqueda:", "No existen coincidencias", "Aceptar");
             }
 

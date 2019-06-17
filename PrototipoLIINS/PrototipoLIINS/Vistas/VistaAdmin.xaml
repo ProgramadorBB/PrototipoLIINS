@@ -19,8 +19,7 @@
                     TextColor="LightGray"  
                     VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
-                    HorizontalTextAlignment="Center"/>
-                
+                    HorizontalTextAlignment="Center"/>                
 
                 <Button x:Name="btnInstrucciones"
                         Text="Ver Instrucciones de Uso"
@@ -125,8 +124,7 @@
                                     HeightRequest="40"
                             IsVisible="False"
                             Clicked="BtnBuscar_Clicked"
-                        />
-                    
+                        />                    
                             <Button x:Name="btnCerrarSesion"
                                     Text="Cerrar Sesión"
                                     BorderRadius="10"
@@ -172,40 +170,7 @@
                                                         <Label FontSize="Micro" Text="Correo:"/>
                                                         <Label FontSize="Micro" Text="{Binding Email}"/>
                                                     </StackLayout>
-                                                </StackLayout>
-                                                <StackLayout Orientation="Horizontal"
-                                                             HorizontalOptions="EndAndExpand"
-                                                             Padding="2"
-                                                    >
-                                                    <StackLayout Orientation="Vertical">                                                        
-                                                        <ImageButton x:Name="btnEditarUsuario"
-                                                                     HeightRequest="24"
-                                                                     Source="edit.png"
-                                                                     VerticalOptions="End"
-                                                                     HorizontalOptions="Center"
-                                                                     Clicked="BtnEditarUsuario_Clicked"/>
-                                                        <Label FontSize="Micro" Text="Editar"
-                                                               TextColor="#545454"
-                                                               FontAttributes="Bold"
-                                                               HorizontalOptions="Center"
-                                                               VerticalTextAlignment="Center"/>
-                                                    </StackLayout>
-                                                    <StackLayout Orientation="Vertical">
-                                                        
-                                                        <ImageButton x:Name="btnEliminarUsuario"                                                                   
-                                                                     HeightRequest="24"
-                                                                     Source="delete.png"
-                                                                     VerticalOptions="Center"
-                                                                     HorizontalOptions="Center"
-                                                                     CommandParameter="{Binding}"
-                                                                     Clicked="BtnEliminarUsuario_Clicked"/>
-                                                        <Label FontSize="Micro" Text="Eliminar"
-                                                               TextColor="#545454"
-                                                               FontAttributes="Bold"
-                                                               HorizontalOptions="Center"
-                                                               VerticalTextAlignment="Center"/>
-                                                    </StackLayout>                                             
-                                                </StackLayout>
+                                             </StackLayout>                                               
                                                 
                                             </StackLayout>
                                         </StackLayout>

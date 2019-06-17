@@ -9,10 +9,12 @@
                  BackgroundColor="LightGray"
                  Spacing="10">
 
-            <Image WidthRequest="128"
+            <Image x:Name="icono"
+               WidthRequest="128"
                Source="ubuscado.png"/>
 
-            <Label Text="¡Usuario Encontrado!" 
+            <Label x:Name="lblTitle"
+               Text="¡Usuario Encontrado!" 
                FontSize="Large"
                FontAttributes="Bold"
                HorizontalTextAlignment="Center"/>
@@ -109,10 +111,23 @@
                         FontAttributes="Bold"
                         TextColor="LightGray"                
                         HeightRequest="40"
-                        ImageSource="edituser.png"
+                        ImageSource="edit.png"
                     IsVisible="False"
                     Clicked="BtnEditarUsuario_Clicked"
                         />
+
+            <Button x:Name="btnEliminarUsuario"
+                        Text="Eliminar Usuario"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="delete.png"
+                        IsVisible="False"
+                        Clicked="BtnEliminarUsuario_Clicked"/>
 
             <Button x:Name="btnGuardarCambios"
                         Text="Guardar cambios"
@@ -137,7 +152,7 @@
 
             <Label Text="Developed by: B.P.S. Solutions S.A.®"
                    VerticalOptions="End"
-               FontSize="Medium"
+               FontSize="Micro"
                FontAttributes="Bold"
                HorizontalTextAlignment="Center"/>
 
