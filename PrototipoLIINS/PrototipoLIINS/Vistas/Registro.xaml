@@ -48,7 +48,8 @@
                     TextColor="LightGray"
                     Text="Crear Cuenta"
                     HeightRequest="40"
-                    Clicked="BtnCrearCuenta_Clicked"/>            
+                    Clicked="BtnCrearCuenta_Clicked"/>
+            
 
             <Label Text=""
                    x:Name="lblMensaje"

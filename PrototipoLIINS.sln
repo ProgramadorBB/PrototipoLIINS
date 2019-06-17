@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototipoLIINS.iOS", "Proto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototipoLIINS.UWP", "PrototipoLIINS\PrototipoLIINS.UWP\PrototipoLIINS.UWP.csproj", "{E49EF62D-5280-48BE-A31F-D9A1E08FEE6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototipoLIINS", "PrototipoLIINS\PrototipoLIINS\PrototipoLIINS.csproj", "{04DDCA1F-2E63-4539-9462-B03BD8032CFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrototipoLIINS", "PrototipoLIINS\PrototipoLIINS\PrototipoLIINS.csproj", "{04DDCA1F-2E63-4539-9462-B03BD8032CFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -143,6 +143,11 @@ namespace PrototipoLIINS.Conexion
             return result;
         }
 
+        public void DeleteAllUsers()
+        {
+            con.DeleteAll<Usuario>();
+        }
+
         public Usuario BuscarUsuario(string email)
         {
             try

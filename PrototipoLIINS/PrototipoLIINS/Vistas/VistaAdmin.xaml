@@ -154,7 +154,7 @@
                                     <ViewCell.View>
                                         <StackLayout Orientation="Vertical">
                                             <StackLayout Orientation="Horizontal">
-                                                <Label FontSize="Medium" FontAttributes="Bold" TextColor="DarkRed" Text="{Binding Id}"
+                                                <Label FontSize="Large" FontAttributes="Bold" TextColor="Black" Text="►"
                                                        VerticalTextAlignment="Center"/>
                                                 <Image Source="usuario.png"
                                                        WidthRequest="40"
@@ -169,6 +169,8 @@
                                                     <StackLayout Orientation="Horizontal">
                                                         <Label FontSize="Micro" Text="Correo:"/>
                                                         <Label FontSize="Micro" Text="{Binding Email}"/>
+                                                        <Label FontSize="Micro" Text="Estado:"/>
+                                                        <Label FontSize="Micro" Text="{Binding Estado}"/>
                                                     </StackLayout>
                                              </StackLayout>                                               
                                                 
