@@ -42,12 +42,19 @@ namespace PrototipoLIINS
                 if (userSesion.Tipo.Equals("Admin"))
                 {
                     lblMensaje.Text = string.Empty;
-                    await this.DisplayAlert("Bienvenido", userSesion.Tipo, "Acceder");
                     Application.Current.Properties["sesion"] = userSesion;
-
                     txtEmail.Text = string.Empty;
                     txtContraseña.Text = string.Empty;
-                    await Navigation.PushAsync(new VistaAdmin());
+                    if (userSesion.Contraseña.Equals("123"))
+                    {
+                        await this.DisplayAlert("LIINS: ", "Hola Admin, Detectamos que es la primera vez que ingresas al sistema, es necesario por la seguridad de sus datos cambiar la contraseña que viene por defecto", "OK");
+                        await Navigation.PushAsync(new VistaCambiarContraseña());
+                    }
+                    else
+                    {                        
+                        await this.DisplayAlert("Bienvenido", userSesion.Tipo, "Acceder");                       
+                        await Navigation.PushAsync(new VistaAdmin());
+                    }
                 }
                 else
                 {

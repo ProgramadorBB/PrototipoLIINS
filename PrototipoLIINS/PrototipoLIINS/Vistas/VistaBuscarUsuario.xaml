@@ -34,7 +34,7 @@
 
             <StackLayout Orientation="Vertical"
                          BackgroundColor="#545454"                         
-                             WidthRequest="100"
+                         WidthRequest="100"
                          Padding="5">
                 
                 <StackLayout Orientation="Horizontal"
@@ -117,28 +117,28 @@
                         />
 
             <Button x:Name="btnEliminarUsuario"
-                        Text="Eliminar Usuario"
-                        BorderRadius="10"
-                        BorderWidth="2"
-                        BorderColor="#353535"
-                        BackgroundColor="#545454"
-                        FontAttributes="Bold"
-                        TextColor="LightGray"                
-                        HeightRequest="40"
-                        ImageSource="delete.png"
-                        IsVisible="False"
-                        Clicked="BtnEliminarUsuario_Clicked"/>
+                    Text="Eliminar Usuario"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="delete.png"
+                    IsVisible="False"
+                    Clicked="BtnEliminarUsuario_Clicked"/>
 
             <Button x:Name="btnGuardarCambios"
-                        Text="Guardar cambios"
-                        BorderRadius="10"
-                        BorderWidth="2"
-                        BorderColor="#353535"
-                        BackgroundColor="#545454"
-                        FontAttributes="Bold"
-                        TextColor="LightGray"                
-                        HeightRequest="40"
-                        ImageSource="guardar.png"
+                    Text="Guardar cambios"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="guardar.png"
                     IsVisible="False"
                     Clicked="BtnGuardarCambios_Clicked"
                         />
