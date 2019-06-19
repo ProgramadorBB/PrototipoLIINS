@@ -24,7 +24,7 @@ namespace PrototipoLIINS
 
             if(buscarAdmin == null)
             {
-                UsuarioRepository.Instancia.AddNuevoUsuario(admin, "123", "Admin", "Admin", "Admin", "desbloqueado");
+                UsuarioRepository.Instancia.AddNuevoUsuario(admin, "123", "Admin", "Admin", "Admin", "Desbloqueado");
             }
 
         }
@@ -59,7 +59,7 @@ namespace PrototipoLIINS
                 else
                 {
 
-                    if (userSesion.Estado.Equals("bloqueado"))
+                    if (userSesion.Estado.Equals("Bloqueado"))
                     {
                         txtEmail.Text = string.Empty;
                         txtContraseña.Text = string.Empty;
@@ -79,7 +79,11 @@ namespace PrototipoLIINS
 
         private async void BtnRegistrarCuenta_Clicked(object sender, EventArgs e)
         {
+            txtEmail.Text = "";
+            txtContraseña.Text = "";
             await Navigation.PushAsync(new Registro() { Title = "Volver"});
+            // para dejar admin x defecto y borrar toda la bdd de ser necesario
+            //UsuarioRepository.Instancia.DeleteAllUsers();
         }
     }
 }

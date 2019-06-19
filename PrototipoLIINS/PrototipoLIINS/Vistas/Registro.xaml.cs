@@ -26,7 +26,7 @@ namespace PrototipoLIINS.Vistas
             //lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
 
             string tipo = "Usuario";
-            string estado = "desbloqueado";
+            string estado = "Desbloqueado";
 
             if (string.IsNullOrEmpty(txtEmail.Text) &&
                 string.IsNullOrEmpty(txtContraseña.Text) &&

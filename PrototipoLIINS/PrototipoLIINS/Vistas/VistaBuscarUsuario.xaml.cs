@@ -85,6 +85,7 @@ namespace PrototipoLIINS.Vistas
             {
                 UsuarioRepository.Instancia.UpdateUser(u);
                 await this.DisplayAlert("LIINS: ", "Usuario actualizado en la base de datos", "Aceptar");
+                lblMensaje.Text = "";
                 await Navigation.PushAsync(new VistaAdmin());
             }
 
