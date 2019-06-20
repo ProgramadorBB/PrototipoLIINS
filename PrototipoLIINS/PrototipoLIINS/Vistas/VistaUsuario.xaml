@@ -110,7 +110,6 @@
                         ImageSource="cerrar.png"
                         TextColor="LightGray"
                         HeightRequest="40"
-                        HorizontalOptions="EndAndExpand"
                         Clicked="BtnCerrarSesion_Clicked"/>
 
             </StackLayout>
