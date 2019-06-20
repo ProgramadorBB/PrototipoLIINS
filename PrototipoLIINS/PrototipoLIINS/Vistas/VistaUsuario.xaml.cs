@@ -16,5 +16,35 @@ namespace PrototipoLIINS.Vistas
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void BtnInstrucciones_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnVincularDispositivo_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnTerminosLegales_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnVerReglamentoGarzón_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void BtnCerrarSesion_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
+
+        private void BtnMonitorearDispensadores_Clicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -84,7 +84,7 @@
                         ImageSource="lista.png"
                         Clicked="BtnGetAllUser_Clicked"/>
 
-                        <StackLayout Orientation="Horizontal"
+                <StackLayout Orientation="Horizontal"
                                      HeightRequest="40"
                                      >
                             <Button x:Name="btnBuscarUsuario"      
@@ -138,6 +138,19 @@
                                     HorizontalOptions="EndAndExpand"
                                     Clicked="BtnCerrarSesion_Clicked"/>
                 </StackLayout>
+
+                <Button x:Name="btnBorrarTodos"
+                        Text="Eliminar Todos los Usuarios"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="borrartodos.png"
+                        Clicked="BtnBorrarTodos_Clicked"
+                        />
 
                 <Grid x:Name="grLista">
                     <ListView ItemsSource="{Binding}"

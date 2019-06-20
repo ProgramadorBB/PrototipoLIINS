@@ -1,16 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PrototipoLIINS.Vistas.VistaUsuario">
+             x:Class="PrototipoLIINS.Vistas.VistaUsuario"
+             Title="Menu Usuario">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical"
-                     Padding="32"
-                     Spacing="10
-                     ">
-            <Label Text="usuario"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            
-        </StackLayout>
+
+        <ScrollView
+            BackgroundColor="LightGray">
+            <StackLayout Orientation="Vertical"
+                     Padding="25"
+                     Spacing="10"
+                     BackgroundColor="LightGray"
+                     >
+                <Label
+                    Text="Menú Usuario"
+                    FontSize="Large"
+                    BackgroundColor="#4E4E4E"
+                    FontAttributes="Bold"   
+                    TextColor="LightGray"  
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"/>
+
+                <Button x:Name="btnVincularDispositivo"
+                    Text="Vincular Dispositivo"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="wifi.png"
+                    Clicked="BtnVincularDispositivo_Clicked"
+                    />
+
+                <Button x:Name="btnMonitorearDispensadores"
+                    Text="Monitorear Dispensadores"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"
+                    HeightRequest="40"
+                    ImageSource="monitorear.png"
+                    Clicked="BtnMonitorearDispensadores_Clicked"
+                    />
+
+                <Button x:Name="btnVerReglamentoGarzón"
+                        Text="Ver Reglamento de Garzón"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="reglamento.png"
+                        Clicked="BtnVerReglamentoGarzón_Clicked"
+                        />
+
+                <Button x:Name="btnInstrucciones"
+                    Text="Ver Instrucciones de Uso"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="instrucciones.png"
+                    Clicked="BtnInstrucciones_Clicked"
+                    />
+
+                <Button x:Name="btnTerminosLegales"
+                    Text="Ver Terminos legales"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="legales.png"
+                    Clicked="BtnTerminosLegales_Clicked"
+                    />
+
+                <Button x:Name="btnCerrarSesion"
+                    Text="Cerrar Sesión"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    ImageSource="cerrar.png"
+                    TextColor="LightGray"
+                    HeightRequest="40"
+                    HorizontalOptions="EndAndExpand"
+                    Clicked="BtnCerrarSesion_Clicked"/>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

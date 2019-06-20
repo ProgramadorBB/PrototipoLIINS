@@ -55,6 +55,7 @@ namespace PrototipoLIINS.Vistas
                 }
                 else
                 {
+                    lblMensaje.Text = "";
                     await this.DisplayAlert("Mensaje:", "El Usuario se ha registrado correctamente en la base de datos LIINS", "Aceptar");
                     await this.Navigation.PopToRootAsync();
                 }

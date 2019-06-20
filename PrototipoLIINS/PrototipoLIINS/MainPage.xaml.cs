@@ -33,7 +33,7 @@ namespace PrototipoLIINS
         {
             lblMensaje.Text = string.Empty;
             Boolean isUsuarioExist = UsuarioRepository.Instancia.AttempLogin(txtEmail.Text, txtContraseña.Text);
-            lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
+            //lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
 
             if (isUsuarioExist.Equals(true))
             {

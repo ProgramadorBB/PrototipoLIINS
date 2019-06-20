@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PrototipoLIINS.Vistas;
 using PrototipoLIINS.Conexion;
 using PrototipoLIINS.Modelo;
 using System.Collections.ObjectModel;
@@ -86,6 +87,7 @@ namespace PrototipoLIINS.Vistas
 
             btnCerrarSesion.IsVisible = false;            
             btnBuscarUsuario.IsVisible = false;
+            btnBorrarTodos.IsVisible = false;
         }
 
         private async void BtnInformación_Clicked(object sender, EventArgs e)
@@ -133,6 +135,7 @@ namespace PrototipoLIINS.Vistas
             {
                 btnBuscarUsuario.IsVisible = true;
                 btnCerrarSesion.IsVisible = true;
+                btnBorrarTodos.IsVisible = true;
 
                 txtBuscar.IsVisible = false;
                 btnBuscar.IsVisible = false;
@@ -141,6 +144,21 @@ namespace PrototipoLIINS.Vistas
                 await this.DisplayAlert("Resultados de la busqueda:", "No existen coincidencias", "Aceptar");
             }
 
+        }
+
+        private async void BtnBorrarTodos_Clicked(object sender, EventArgs e)
+        {
+            if (await this.DisplayAlert("¡IMPORTANTE!",
+                    "La base de datos de usuarios sera borrada completamente y restablecera los datos predeterminados del administrador por lo que al finalizar esta acción el sistema lo devolvera al Login, ¿Esta seguro de realizar esta acción?",
+                    "Si",
+                    "Cancelar") == true)
+            {
+                //Usuario admin = (Usuario)Application.Current.Properties["sesion"];
+                UsuarioRepository.Instancia.DeleteAllUsers();
+                await this.DisplayAlert("Mensaje:","La base de datos de los usuarios a sido eliminada con exito","OK");
+                UsuarioRepository.Instancia.AddNuevoUsuario("Admin", "123", "Admin", "Admin", "Admin", "Desbloqueado");
+                await Navigation.PopToRootAsync();
+            }
         }
     }
 }
