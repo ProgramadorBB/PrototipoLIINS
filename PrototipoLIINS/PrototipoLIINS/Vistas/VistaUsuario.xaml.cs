@@ -18,9 +18,9 @@ namespace PrototipoLIINS.Vistas
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private void BtnInstrucciones_Clicked(object sender, EventArgs e)
+        private async void BtnInstrucciones_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VistaInstrucciones() { Title = "Volver al Menú" });
         }
 
         private void BtnVincularDispositivo_Clicked(object sender, EventArgs e)
@@ -28,9 +28,9 @@ namespace PrototipoLIINS.Vistas
 
         }
 
-        private void BtnTerminosLegales_Clicked(object sender, EventArgs e)
+        private async void BtnTerminosLegales_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VistaLegal() { Title = "Volver al Menú" });
         }
 
         private void BtnVerReglamentoGarzón_Clicked(object sender, EventArgs e)
