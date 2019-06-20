@@ -15,7 +15,8 @@ namespace PrototipoLIINS.Vistas
 		public VistaUsuario ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         private void BtnInstrucciones_Clicked(object sender, EventArgs e)
         {
@@ -43,6 +44,11 @@ namespace PrototipoLIINS.Vistas
         }
 
         private void BtnMonitorearDispensadores_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnVerPerfil_Clicked(object sender, EventArgs e)
         {
 
         }

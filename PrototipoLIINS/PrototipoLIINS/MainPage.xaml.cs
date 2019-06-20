@@ -32,8 +32,8 @@ namespace PrototipoLIINS
         private async void btnIngresar_Clicked(object sender, EventArgs e)
         {
             lblMensaje.Text = string.Empty;
-            Boolean isUsuarioExist = UsuarioRepository.Instancia.AttempLogin(txtEmail.Text, txtContraseña.Text);
-            //lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
+            Boolean isUsuarioExist = UsuarioRepository.Instancia.AttempLogin(txtEmail.Text, txtContraseña.Text);            
+            lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
 
             if (isUsuarioExist.Equals(true))
             {
@@ -71,6 +71,7 @@ namespace PrototipoLIINS
                         Application.Current.Properties["sesion"] = userSesion;
                         txtEmail.Text = string.Empty;
                         txtContraseña.Text = string.Empty;
+                        lblMensaje.Text = string.Empty;
                         await Navigation.PushAsync(new VistaUsuario());
                     }
                 }
