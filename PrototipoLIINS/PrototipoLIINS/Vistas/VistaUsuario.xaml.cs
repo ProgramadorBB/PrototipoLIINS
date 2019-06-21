@@ -36,9 +36,9 @@ namespace PrototipoLIINS.Vistas
             await Navigation.PushAsync(new VistaLegal() { Title = "Volver al Menú" });
         }
 
-        private void BtnVerReglamentoGarzón_Clicked(object sender, EventArgs e)
+        private async void BtnVerReglamentoGarzón_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VistaReglamentoGarzon() { Title = "Volver al Menú" });
         }
 
         private async void BtnCerrarSesion_Clicked(object sender, EventArgs e)
