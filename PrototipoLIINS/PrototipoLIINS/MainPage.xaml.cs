@@ -67,8 +67,11 @@ namespace PrototipoLIINS
                     }
                     else
                     {
+
                         await this.DisplayAlert("Bienvenido: ", userSesion.Nombre + " " + userSesion.Apellido, "Acceder");
                         Application.Current.Properties["sesion"] = userSesion;
+                        Usuario u = UsuarioRepository.Instancia.BuscarUsuario(txtEmail.Text);
+                        Application.Current.Properties["datos"] = u;
                         txtEmail.Text = string.Empty;
                         txtContraseña.Text = string.Empty;
                         lblMensaje.Text = string.Empty;

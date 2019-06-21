@@ -12,7 +12,7 @@
                      Spacing="10"
                      BackgroundColor="LightGray"
                      >
-                <Label
+                <Label x:Name="lblTitulo"
                     Text="Menú Usuario"
                     FontSize="Large"
                     BackgroundColor="#4E4E4E"
@@ -34,6 +34,127 @@
                         ImageSource="perfil.png"
                         Clicked="BtnVerPerfil_Clicked"                        
                     />
+
+                <StackLayout x:Name="slCuadro"
+                    Orientation="Vertical"
+                             BackgroundColor="#545454"
+                             IsVisible="False"
+                             Padding="10">
+
+                    <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40"
+                             >
+                        <Label Text="E-mail: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                        <Label x:Name="lblEmail" Text="" TextColor="LightGray" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Entry x:Name="txtEmail" FontSize="Medium" TextColor="LightGray" 
+                       Placeholder="Ingrese Email" PlaceholderColor="LightGray"                           
+                       IsVisible="False"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40">
+                        <Label Text="Contraseña: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                        <Label x:Name="lblContraseña" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium" />
+                        <Entry x:Name="txtContraseña" FontSize="Medium" TextColor="LightGray" 
+                       Placeholder="Ingrese Contraseña" PlaceholderColor="LightGray"
+                       IsVisible="False"/>
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40">
+                        <Label Text="Nombre: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                        <Label x:Name="lblNombre" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Entry x:Name="txtNombre" FontSize="Medium" TextColor="LightGray" 
+                       Placeholder="Ingrese Nombre" PlaceholderColor="LightGray"
+                       IsVisible="False"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             HeightRequest="40">
+                        <Label Text="Apellido: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                        <Label x:Name="lblApellido" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
+                        <Entry x:Name="txtApellido" FontSize="Medium" TextColor="LightGray" 
+                       Placeholder="Ingrese Apellido" PlaceholderColor="LightGray"
+                       IsVisible="False"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <Button x:Name="btnModificarPerfil"
+                        Text="Modificar Perfil de Usuario"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="edit.png"
+                        IsVisible="False"
+                        Clicked="BtnModificarPerfil_Clicked"                    
+                        />
+
+                <Button x:Name="btnGuardarCambios"
+                    Text="Guardar cambios"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="guardar.png"
+                    IsVisible="False"
+                    Clicked="BtnGuardarCambios_Clicked"
+                        />
+
+                <Button x:Name="btnEliminarCuenta"
+                    Text="Eliminar Cuenta"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="delete.png"
+                    IsVisible="False"
+                    Clicked="BtnEliminarCuenta_Clicked"/>
+
+                <Button x:Name="btnVolver"
+                    Text="Volver al Menú"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="volver.png"
+                    IsVisible="False"
+                        Clicked="BtnVolver_Clicked"/>
+
+                <Button x:Name="btnVolver2"
+                    Text="Volver"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="volver.png"
+                    IsVisible="False"
+                        Clicked="BtnVolver2_Clicked"/>
 
                 <Button x:Name="btnVincularDispositivo"
                         Text="Vincular Dispositivo"
