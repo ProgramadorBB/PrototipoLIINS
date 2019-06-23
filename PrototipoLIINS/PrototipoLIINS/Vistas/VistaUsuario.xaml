@@ -179,6 +179,8 @@
                         TextColor="LightGray"
                         HeightRequest="40"
                         ImageSource="monitorear.png"
+                        IsEnabled="False"
+                        IsVisible="False"
                         Clicked="BtnMonitorearDispensadores_Clicked"
                     />
 

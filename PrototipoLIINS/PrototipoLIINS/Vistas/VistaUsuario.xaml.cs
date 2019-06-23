@@ -28,7 +28,11 @@ namespace PrototipoLIINS.Vistas
 
         private void BtnVincularDispositivo_Clicked(object sender, EventArgs e)
         {
-
+            btnMonitorearDispensadores.IsEnabled = true;
+            btnMonitorearDispensadores.IsVisible = true;
+            btnVincularDispositivo.IsEnabled = false;
+            btnVincularDispositivo.IsVisible = false;
+            
         }
 
         private async void BtnTerminosLegales_Clicked(object sender, EventArgs e)
@@ -61,12 +65,19 @@ namespace PrototipoLIINS.Vistas
         {
             lblTitulo.Text = "Perfil de Usuario";
             btnVerPerfil.IsVisible = false;
-            btnMonitorearDispensadores.IsVisible = false;
             btnInstrucciones.IsVisible = false;
-            btnVerReglamentoGarzón.IsVisible = false;
-            btnVincularDispositivo.IsVisible = false;
+            btnVerReglamentoGarzón.IsVisible = false;            
             btnTerminosLegales.IsVisible = false;
             btnCerrarSesion.IsVisible = false;
+
+            if(btnVincularDispositivo.IsEnabled == true)
+            {
+                btnVincularDispositivo.IsVisible = false;
+            }
+            if(btnMonitorearDispensadores.IsEnabled == true)
+            {
+                btnMonitorearDispensadores.IsVisible = false;
+            }
 
             slCuadro.IsVisible = true;
             btnModificarPerfil.IsVisible = true;
@@ -127,12 +138,19 @@ namespace PrototipoLIINS.Vistas
         {
             lblTitulo.Text = "Menú Usuario";
             btnVerPerfil.IsVisible = true;
-            btnMonitorearDispensadores.IsVisible = true;
             btnInstrucciones.IsVisible = true;
             btnVerReglamentoGarzón.IsVisible = true;
-            btnVincularDispositivo.IsVisible = true;
             btnTerminosLegales.IsVisible = true;
             btnCerrarSesion.IsVisible = true;
+
+            if (btnVincularDispositivo.IsEnabled == true)
+            {
+                btnVincularDispositivo.IsVisible = true;
+            }
+            if (btnMonitorearDispensadores.IsEnabled == true)
+            {
+                btnMonitorearDispensadores.IsVisible = true;
+            }
 
             slCuadro.IsVisible = false;
             btnModificarPerfil.IsVisible = false;
