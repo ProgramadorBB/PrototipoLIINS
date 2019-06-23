@@ -56,9 +56,9 @@ namespace PrototipoLIINS.Vistas
             }
         }
 
-        private void BtnMonitorearDispensadores_Clicked(object sender, EventArgs e)
+        private async void BtnMonitorearDispensadores_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VistaDispensarios());
         }
 
         private void BtnVerPerfil_Clicked(object sender, EventArgs e)
