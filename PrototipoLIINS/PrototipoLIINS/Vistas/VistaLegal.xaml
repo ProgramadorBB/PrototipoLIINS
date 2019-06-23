@@ -17,6 +17,19 @@
                        FontSize="Large"
                        FontAttributes="Bold"/>
 
+                <Button x:Name="btnVolver"
+                        Text="Volver al Menú"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="volver.png"
+                        Clicked="BtnVolver_Clicked"
+                        />
+
                 <Label Text="EJEMPLO! (EN DESARROLLO LA REDACCIÓN)"
                        FontSize="Medium"
                        VerticalOptions="CenterAndExpand" 
