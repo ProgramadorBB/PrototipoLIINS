@@ -22,7 +22,7 @@ namespace PrototipoLIINS.Vistas
 		{
             BindingContext = users;
             InitializeComponent ();
-            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, false);            
         }
 
         private async void OnUpdateUser(object sender, ItemTappedEventArgs e)

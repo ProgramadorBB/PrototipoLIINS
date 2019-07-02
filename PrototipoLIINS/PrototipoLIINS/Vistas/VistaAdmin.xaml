@@ -85,7 +85,7 @@
                         Clicked="BtnGetAllUser_Clicked"/>
 
                 <StackLayout Orientation="Horizontal"
-                                     HeightRequest="40"
+                                     HeightRequest="45"
                                      >
                             <Button x:Name="btnBuscarUsuario"      
                                          Text="Buscar Usuario"
@@ -96,12 +96,12 @@
                                     FontAttributes="Bold"
                                     ImageSource="buscar.png"
                                     TextColor="LightGray"
-                                    HeightRequest="40"
+                                    HeightRequest="45"
                                     HorizontalOptions="FillAndExpand"
                                          Clicked="BtnBuscarUsuario_Clicked"/>
 
                     <ImageButton x:Name="btnInformación"   
-                                         HeightRequest="40"
+                                         HeightRequest="45"
                                          Source="info.png"
                                          VerticalOptions="Center"
                                          HorizontalOptions="Center"
@@ -121,12 +121,12 @@
                                     BackgroundColor="#545454"
                                     FontAttributes="Bold"
                                     TextColor="LightGray"
-                                    HeightRequest="40"
+                                    HeightRequest="45"
                             IsVisible="False"
                             Clicked="BtnBuscar_Clicked"
                         />                    
                             <Button x:Name="btnCerrarSesion"
-                                    Text="Cerrar Sesión"
+                                    Text="Cerrar"
                                     BorderRadius="10"
                                     BorderWidth="2"
                                     BorderColor="#353535"
@@ -134,7 +134,7 @@
                                     FontAttributes="Bold"
                                     ImageSource="cerrar.png"
                                     TextColor="LightGray"
-                                    HeightRequest="40"
+                                    HeightRequest="45"
                                     HorizontalOptions="EndAndExpand"
                                     Clicked="BtnCerrarSesion_Clicked"/>
                 </StackLayout>
@@ -174,16 +174,16 @@
                                                        VerticalOptions="Center"/>
                                                 <StackLayout Orientation="Vertical">
                                                     <StackLayout Orientation="Horizontal">
-                                                        <Label FontSize="Medium" TextColor="Black" Text="{Binding Tipo}"/>
-                                                        <Label FontSize="Medium" Text="-"/>
-                                                        <Label FontSize="Medium" TextColor="Black" Text="{Binding Nombre}"/>
-                                                        <Label FontSize="Medium" TextColor="Black" Text="{Binding Apellido}"/>
+                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Tipo}"/>
+                                                        <Label FontSize="Micro" Text="-"/>
+                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Nombre}"/>
+                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Apellido}"/>
                                                     </StackLayout>
                                                     <StackLayout Orientation="Horizontal">
-                                                        <Label FontSize="Micro" Text="Correo:"/>
-                                                        <Label FontSize="Micro" Text="{Binding Email}"/>
-                                                        <Label FontSize="Micro" Text="Estado:"/>
-                                                        <Label FontSize="Micro" Text="{Binding Estado}"/>
+                                                        <Label FontSize="Small" Text="Correo:"/>
+                                                        <Label FontSize="Small" Text="{Binding Email}"/>
+                                                        <Label FontSize="Small" Text="Estado:"/>
+                                                        <Label FontSize="Small" Text="{Binding Estado}"/>
                                                     </StackLayout>
                                              </StackLayout>                                               
                                                 

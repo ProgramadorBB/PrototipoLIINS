@@ -52,6 +52,7 @@ namespace PrototipoLIINS.Vistas
                     txtApellido.Text = string.Empty;
 
                     await this.DisplayAlert("Mensaje", "El usuario ya está registrado", "OK");
+                    lblMensaje.Text = string.Empty;
                 }
                 else
                 {
@@ -59,7 +60,7 @@ namespace PrototipoLIINS.Vistas
                     await this.DisplayAlert("Mensaje:", "El Usuario se ha registrado correctamente en la base de datos LIINS", "Aceptar");
                     await this.Navigation.PopToRootAsync();
                 }
-            }                
+            }
         }
 
     }

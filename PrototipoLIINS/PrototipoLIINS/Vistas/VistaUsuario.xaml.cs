@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using PrototipoLIINS.Conexion;
 using PrototipoLIINS.Modelo;
 using PrototipoLIINS.Vistas;
+using System.IO.Ports;
+using System.Threading;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -19,6 +21,8 @@ namespace PrototipoLIINS.Vistas
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
+            
+
         }
 
         private async void BtnInstrucciones_Clicked(object sender, EventArgs e)
@@ -32,6 +36,8 @@ namespace PrototipoLIINS.Vistas
             btnMonitorearDispensadores.IsVisible = true;
             btnVincularDispositivo.IsEnabled = false;
             btnVincularDispositivo.IsVisible = false;
+
+           // ArduinoBT.conexBT();
             
         }
 

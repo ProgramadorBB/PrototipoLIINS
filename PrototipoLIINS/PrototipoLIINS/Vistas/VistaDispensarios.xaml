@@ -57,7 +57,7 @@
                             ImageSource="dispensador.png"                           
                             />
                     <Button x:Name="btnDispensadorTodos"
-                            Text="Monitorear todos los Dispensadores"
+                            Text="Monitorear Dispensadores"
                             BorderRadius="10"
                             BorderWidth="2"
                             BorderColor="#353535"

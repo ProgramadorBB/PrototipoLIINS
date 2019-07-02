@@ -57,7 +57,7 @@
                HorizontalTextAlignment="Center"/>
 
         <Label Text="Developed by: B.P.S. Solutions S.A.®"
-               FontSize="Medium"
+               FontSize="Micro"
                FontAttributes="Bold"
                HorizontalTextAlignment="Center"/>
 

@@ -3,21 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrototipoLIINS.Vistas.VistaInstrucciones">
     <ContentPage.Content>
-        
+
         <ScrollView
             BackgroundColor="LightGray">
             <StackLayout Orientation="Vertical"
-                     Padding="22"
+                     Padding="25"
                      BackgroundColor="LightGray"
                      Spacing="10">
 
-                <Label Text="Instruciones de Uso"
-                       VerticalOptions="Center" 
-                       HorizontalOptions="CenterAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Large"
-                       FontAttributes="Bold"/>
+                <Label x:Name="lblTitulo"
+                    Text="Instrucciones de Uso"
+                    FontSize="Large"
+                    BackgroundColor="#4E4E4E"
+                    FontAttributes="Bold"   
+                    TextColor="LightGray"  
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"/>
 
                 <Button x:Name="btnVolver"
                         Text="Volver al Menú"
@@ -32,76 +34,11 @@
                         Clicked="BtnVolver_Clicked"
                         />
 
-                <Label Text="Paso a Paso. (EN DESARROLLO LA REDACCIÓN)"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center" 
-                       HorizontalOptions="CenterAndExpand"/>
-
-                <Label Text="1) blabla blallbllalb llal bllalblalblal "
-                       FontSize="Micro"
-                       HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center"
-                    />
-                <Label Text="2) blabla blallbllalb llal bllalblalblal "
-                       FontSize="Micro"
-                       HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center"
-                    />
-                <Label Text="3) blabla blallbllalb llal bllalblalblal "
-                       FontSize="Micro"
-                       HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center"
-                    />
-                <Label Text="4) blabla blallbllalb llal bllalblalblal "
-                       FontSize="Micro"
-                       HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center"
-                    />
-                <Label Text="5) blabla blallbllalb llal bllalblalblal "
-                       FontSize="Micro"
-                       HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center"
-                    />
-                <Label Text="6) blabla blallbllalb llal bllalblalblal "
-                       FontSize="Micro"
-                       HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center"
-                    />
-                <Label Text="7) blabla blallbllalb llal bllalblalblal "
-                       FontSize="Micro"
-                       HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center"
-                    />
-                <Label Text="N°...) blabla blallbllalb llal bllalblalblal "
-                       FontSize="Micro"
-                       HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       VerticalOptions="Center"
-                    />
-                
-
-
-
+                <Image Source="iu1.png"
+                       VerticalOptions="Center"/>
 
             </StackLayout>
         </ScrollView>
-        
+
     </ContentPage.Content>
 </ContentPage>

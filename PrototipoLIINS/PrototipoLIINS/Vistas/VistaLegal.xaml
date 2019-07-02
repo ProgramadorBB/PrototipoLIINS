@@ -11,11 +11,15 @@
                      BackgroundColor="LightGray"
                      Spacing="10">
 
-                <Label Text="Terminos legales"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
-                       FontSize="Large"
-                       FontAttributes="Bold"/>
+                <Label x:Name="lblTitulo"
+                    Text="Terminos Legales"
+                    FontSize="Large"
+                    BackgroundColor="#4E4E4E"
+                    FontAttributes="Bold"   
+                    TextColor="LightGray"  
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"/>
 
                 <Button x:Name="btnVolver"
                         Text="Volver al Menú"
@@ -30,30 +34,15 @@
                         Clicked="BtnVolver_Clicked"
                         />
 
-                <Label Text="EJEMPLO! (EN DESARROLLO LA REDACCIÓN)"
-                       FontSize="Medium"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"/>
-
-                <Label HorizontalOptions="FillAndExpand"
-                       HorizontalTextAlignment="Center"
-                       Text=
-                       "
-                       No cumplir con estos requisitos básicos puede generar problemas con la administración, la justicia y los usuarios. Eso por no hablar de los retrasos en el lanzamiento, las actualizaciones o modificaciones de última hora de la aplicación que no estaban previstos y que pueden suponer un coste añadido al proyecto. El bufete de abogados , experto en startups, ha elaborado un listado de requisitos legales que debe cumplir una app
-                       Permisos, licencia y condiciones de uso. Hay que ser claros y explícitos a la hora de solicitar permisos al usuario para acceder a contactos de su dispositivo, realizar pagos o ceder datos. Además, es obligatorio desarrollar licencias y condiciones de uso. En todos los casos no basta con informar al usuario sino que éste tiene que aceptar, ya que en caso de reclamación tendremos una mejor defensa, advierten.
-                       Derechos propios y de terceros. Es obligatorio disponer de licencias de los recursos que se vayan a utilizar. Para ello, hay que leer detenidamente las condiciones ya que hay casos en los que los recursos excluyen el uso comercial, no pudiéndose ejecutar en aplicaciones. Además, conviene proteger el contenido para evitar plagios y copias, aseguran.
-                       Menores. En caso de apps dirigidas a menores de 14 años se deben consultar las leyes correspondientes y las obligaciones impuestas ya que existe una regulación especial en materia de consumidores y usuarios, protección de datos, derechos de imagen, etc, apuntan.
-                       Funcionalidades lícitas. Al igual que en el marketing tradicional, lo que es ilícito offline en la App también lo es como, por ejemplo, el estimular un ámbito de vida poco saludable, como el consumo excesivo de alcohol u otras sustancias, recomiendan.
-                       Privacidad y geolocalización. La recogida de información del usuario debe ser la indispensable para el funcionamiento de la App y éste debe tener la posibilidad de configurar la privacidad. Además, si nuestra aplicación dispone de geolocalización, se tiene que contar con la aceptación del usuario para poder acceder a ella, alertan.
-                       Información y cookies. Es fundamental informar al usuario de los aspectos regulados en la ley y mostrar los datos sobre los creadores y sobre quienes se encuentra tras la App. También es necesario que el usuario acepte las cookies, mediante un aviso informativo con la información básica y precisa sobre las mismas, y los aspectos exigidos por la ley, aseguran.
-                       Markets. Tienen condiciones muy estrictas para que se puedan publicar las aplicaciones por lo que hay que cumplir siempre lo que piden. De hecho, incluso cumpliendo las condiciones al colgar la app, éstas pueden cambiar y hacer que la aplicación no esté disponible para usuarios nuevos. Un ejemplo que suelen alegar los markets para rechazar una App es que su interfaz de usuario es compleja o menos que 'muy buena', recuerdan.
-                       Publicidad. Si monetizas una aplicación a través de publicidad, ésta debe identificarse siempre como tal, concluyen.
-                       "
-                />
-
+                <Image Source="tl1.png"
+                       VerticalOptions="Center"/>
+                <Image Source="tl2.png"
+                       VerticalOptions="Center"/>
+                <Image Source="tl3.png"
+                       VerticalOptions="Center"/>
 
             </StackLayout>
-            </ScrollView>
+        </ScrollView>
 
     </ContentPage.Content>
 </ContentPage>
