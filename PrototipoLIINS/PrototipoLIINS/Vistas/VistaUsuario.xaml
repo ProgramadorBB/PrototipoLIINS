@@ -48,7 +48,7 @@
                              >
                         <Label Text="E-mail: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                         <Label x:Name="lblEmail" Text="" TextColor="LightGray" VerticalTextAlignment="Center" FontSize="Medium"/>
-                        <Entry x:Name="txtEmail" FontSize="Medium" TextColor="LightGray" 
+                        <Entry x:Name="txtEmail" FontSize="Micro" TextColor="LightGray" 
                        Placeholder="Ingrese Email" PlaceholderColor="LightGray"                           
                        IsVisible="False"/>
                     </StackLayout>
@@ -59,7 +59,7 @@
                              HeightRequest="40">
                         <Label Text="Contraseña: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                         <Label x:Name="lblContraseña" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium" />
-                        <Entry x:Name="txtContraseña" FontSize="Medium" TextColor="LightGray" 
+                        <Entry x:Name="txtContraseña" FontSize="Micro" TextColor="LightGray" 
                        Placeholder="Ingrese Contraseña" PlaceholderColor="LightGray"
                        IsVisible="False"/>
                     </StackLayout>
@@ -71,7 +71,7 @@
                              HeightRequest="40">
                         <Label Text="Nombre: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                         <Label x:Name="lblNombre" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
-                        <Entry x:Name="txtNombre" FontSize="Medium" TextColor="LightGray" 
+                        <Entry x:Name="txtNombre" FontSize="Micro" TextColor="LightGray" 
                        Placeholder="Ingrese Nombre" PlaceholderColor="LightGray"
                        IsVisible="False"/>
                     </StackLayout>
@@ -82,7 +82,7 @@
                              HeightRequest="40">
                         <Label Text="Apellido: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                         <Label x:Name="lblApellido" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
-                        <Entry x:Name="txtApellido" FontSize="Medium" TextColor="LightGray" 
+                        <Entry x:Name="txtApellido" FontSize="Micro" TextColor="LightGray" 
                        Placeholder="Ingrese Apellido" PlaceholderColor="LightGray"
                        IsVisible="False"/>
                     </StackLayout>
@@ -165,7 +165,7 @@
                         FontAttributes="Bold"
                         TextColor="LightGray"                
                         HeightRequest="40"
-                        ImageSource="wifi.png"
+                        ImageSource="bluetooth.png"
                         Clicked="BtnVincularDispositivo_Clicked"
                     />
 
