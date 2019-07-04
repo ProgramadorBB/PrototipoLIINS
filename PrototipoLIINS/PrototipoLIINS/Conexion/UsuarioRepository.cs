@@ -72,7 +72,7 @@ namespace PrototipoLIINS.Conexion
                     Estado = estado
                 });
 
-                EstadoMensaje = string.Format("{0} Nuevo usuario añadido", result);
+                EstadoMensaje = string.Format("Nuevo usuario añadido", result);
             } catch (Exception e)
             {
                 EstadoMensaje = e.Message;
@@ -131,7 +131,7 @@ namespace PrototipoLIINS.Conexion
 
                 if (result > 0)
                 {
-                    EstadoMensaje = string.Format("Eliminado [id: {0}]", id);
+                    EstadoMensaje = string.Format("Usuario Eliminado", id);
                 }
 
 
@@ -196,7 +196,7 @@ namespace PrototipoLIINS.Conexion
 
                 if (result > 0)
                 {
-                    EstadoMensaje = string.Format("Actualizando [Id: {0}]", u.Id);
+                    EstadoMensaje = string.Format("Usuario Actualizado", u.Id);
                 }
 
             }
