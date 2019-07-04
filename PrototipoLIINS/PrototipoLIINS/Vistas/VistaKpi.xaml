@@ -3,16 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrototipoLIINS.Vistas.VistaKpi">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Indicador de Consumo acumulado"
-                   FontSize="Large"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text="EN DESARROLLO"
-                   FontSize="Large"
-                   FontAttributes="Bold"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <ScrollView
+            BackgroundColor="LightGray">
+            <StackLayout Orientation="Vertical"
+                     Padding="25"
+                     BackgroundColor="LightGray"
+                     Spacing="10">
+
+                <Label x:Name="lblTitulo"
+                    Text="KPI Consumo Acumulado"
+                    FontSize="Large"
+                    BackgroundColor="#4E4E4E"
+                    FontAttributes="Bold"   
+                    TextColor="LightGray"  
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"/>
+
+                <Image WidthRequest="256"
+                       x:Name="icono"
+                       Source="iconoKpi.png"/>
+
+                <Button x:Name="btnVolver"
+                        Text="Volver al Menú"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        BorderColor="#353535"
+                        BackgroundColor="#545454"
+                        FontAttributes="Bold"
+                        TextColor="LightGray"                
+                        HeightRequest="40"
+                        ImageSource="volver.png"
+                        Clicked="BtnVolver_Clicked"
+                        />
+            </StackLayout>
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
