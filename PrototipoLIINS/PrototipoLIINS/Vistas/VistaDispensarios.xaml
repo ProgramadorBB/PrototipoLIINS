@@ -22,7 +22,8 @@
                     HorizontalTextAlignment="Center"/>
 
                 <Image WidthRequest="256"
-               Source="iconoDispenser.png"/>
+                       x:Name="icono"
+                       Source="iconoDispenser.png"/>
                     
                     <Button x:Name="btnDispensador1"
                             Text="Monitorear el Dispensador n°1"

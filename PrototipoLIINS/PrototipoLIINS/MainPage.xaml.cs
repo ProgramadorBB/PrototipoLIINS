@@ -51,23 +51,22 @@ namespace PrototipoLIINS
                         await Navigation.PushAsync(new VistaCambiarContraseña());
                     }
                     else
-                    {                        
+                    {
                         await this.DisplayAlert("Bienvenido", userSesion.Tipo, "Acceder");                       
-                        await Navigation.PushAsync(new VistaAdmin());
+                        await Navigation.PushAsync(new VistaAdmin());                        
                     }
                 }
                 else
                 {
 
                     if (userSesion.Estado.Equals("Bloqueado"))
-                    {
-                        txtEmail.Text = string.Empty;
+                    {                        
                         txtContraseña.Text = string.Empty;
                         await this.DisplayAlert("Cuenta Bloqueada", "Para más información contactarse con el Administrador", "OK");
                     }
                     else
                     {
-
+                        lblMensaje.Text = string.Empty;
                         await this.DisplayAlert("Bienvenido: ", userSesion.Nombre + " " + userSesion.Apellido, "Acceder");
                         Application.Current.Properties["sesion"] = userSesion;
                         Usuario u = UsuarioRepository.Instancia.BuscarUsuario(txtEmail.Text);

@@ -118,7 +118,7 @@ namespace PrototipoLIINS.Conexion
                 return false;
             }
 
-            EstadoMensaje = "Usuario no registrado";
+            EstadoMensaje = "El E-mail y/o la contraseña es inválida";
             return false;
         }
 

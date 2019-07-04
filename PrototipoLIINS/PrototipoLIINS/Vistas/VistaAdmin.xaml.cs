@@ -117,7 +117,13 @@ namespace PrototipoLIINS.Vistas
 
         private async void BtnCerrarSesion_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync();
+            if (await this.DisplayAlert("LIINS:",
+                    "¿Desea Cerrar Sesión? ",
+                    "Si",
+                    "Cancelar") == true)
+            {
+                await Navigation.PopToRootAsync();
+            }
         }
 
         private async void BtnBuscar_Clicked(object sender, EventArgs e)

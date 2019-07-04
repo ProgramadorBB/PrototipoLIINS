@@ -57,6 +57,7 @@ namespace PrototipoLIINS.Vistas
                 btnDispensador3.IsVisible = true;
                 btnDispensadorTodos.IsVisible = true;
                 btnVolver.IsVisible = true;
+                icono.IsVisible = true;
 
                 slDispensador1.IsVisible = false;
                 btnRellenoListo1.IsVisible = false;
@@ -73,6 +74,7 @@ namespace PrototipoLIINS.Vistas
                 btnDispensador3.IsVisible = true;
                 btnDispensadorTodos.IsVisible = true;
                 btnVolver.IsVisible = true;
+                icono.IsVisible = true;
 
                 slDispensador2.IsVisible = false;
                 btnRellenoListo2.IsVisible = false;
@@ -89,6 +91,7 @@ namespace PrototipoLIINS.Vistas
                 btnDispensador3.IsVisible = true;
                 btnDispensadorTodos.IsVisible = true;
                 btnVolver.IsVisible = true;
+                icono.IsVisible = true;
 
                 slDispensador3.IsVisible = false;
                 btnRellenoListo3.IsVisible = false;
@@ -105,6 +108,7 @@ namespace PrototipoLIINS.Vistas
                 btnDispensador3.IsVisible = true;
                 btnDispensadorTodos.IsVisible = true;
                 btnVolver.IsVisible = true;
+                icono.IsVisible = true;
 
                 slDispensador1.IsVisible = false;
                 slDispensador2.IsVisible = false;
@@ -129,6 +133,7 @@ namespace PrototipoLIINS.Vistas
             btnDispensador3.IsVisible = false;
             btnDispensadorTodos.IsVisible = false;
             btnVolver.IsVisible = false;
+            icono.IsVisible = false;
 
             slDispensador1.IsVisible = true;
             slBotones1.IsVisible = true;
@@ -164,6 +169,7 @@ namespace PrototipoLIINS.Vistas
             btnDispensador3.IsVisible = false;
             btnDispensadorTodos.IsVisible = false;
             btnVolver.IsVisible = false;
+            icono.IsVisible = false;
 
             slDispensador2.IsVisible = true;
             slBotones2.IsVisible = true;
@@ -198,6 +204,7 @@ namespace PrototipoLIINS.Vistas
             btnDispensador3.IsVisible = false;
             btnDispensadorTodos.IsVisible = false;
             btnVolver.IsVisible = false;
+            icono.IsVisible = false;
 
             slDispensador3.IsVisible = true;
             slBotones3.IsVisible = true;
@@ -232,6 +239,7 @@ namespace PrototipoLIINS.Vistas
             btnDispensador3.IsVisible = false;
             btnDispensadorTodos.IsVisible = false;
             btnVolver.IsVisible = false;
+            icono.IsVisible = false;
 
             slDispensador1.IsVisible = true;            
             slDispensador2.IsVisible = true;
