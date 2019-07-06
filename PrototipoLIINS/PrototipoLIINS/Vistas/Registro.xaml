@@ -18,8 +18,8 @@
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"/>
 
-            <Entry x:Name="txtEmail"
-                   Placeholder="Ingrese Email"
+            <Entry x:Name="txtUser"
+                   Placeholder="Ingrese Usuario"
                    FontSize="Medium"
                    FontAttributes="Italic"/>
 

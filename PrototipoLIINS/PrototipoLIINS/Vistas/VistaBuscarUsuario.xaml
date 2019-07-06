@@ -40,23 +40,24 @@
                 <StackLayout Orientation="Horizontal"
                              VerticalOptions="CenterAndExpand"
                              HorizontalOptions="CenterAndExpand"
-                             HeightRequest="40"
+                             HeightRequest="45"
                              >
-                    <Label Text="E-mail: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
-                    <Label x:Name="lblEmail" Text="" TextColor="LightGray" VerticalTextAlignment="Center" FontSize="Medium"/>
-                    <Entry x:Name="txtEmail" FontSize="Medium" TextColor="LightGray" 
-                       Placeholder="Ingrese Email" PlaceholderColor="LightGray"                           
+                    <Label Text="Usuario: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+                    <Label x:Name="lblUser" Text="" TextColor="LightGray" VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Entry x:Name="txtUser" FontSize="Medium" TextColor="LightGray" 
+                       Placeholder="Ingrese Usuario" PlaceholderColor="LightGray"                           
                        IsVisible="False"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal"
                              VerticalOptions="CenterAndExpand"
                              HorizontalOptions="CenterAndExpand"
-                             HeightRequest="40">
+                             HeightRequest="45">
                     <Label Text="Contraseña: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                     <Label x:Name="lblContraseña" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium" />
                     <Entry x:Name="txtContraseña" FontSize="Medium" TextColor="LightGray" 
-                       Placeholder="Ingrese Contraseña" PlaceholderColor="LightGray"
+                       Placeholder="Ingrese Contraseña" PlaceholderColor="LightGray" IsPassword="True"
+                           WidthRequest="150"
                        IsVisible="False"/>
                 </StackLayout>
 
@@ -64,7 +65,7 @@
                 <StackLayout Orientation="Horizontal"
                              VerticalOptions="CenterAndExpand"
                              HorizontalOptions="CenterAndExpand"
-                             HeightRequest="40">
+                             HeightRequest="45">
                     <Label Text="Nombre: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                     <Label x:Name="lblNombre" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
                     <Entry x:Name="txtNombre" FontSize="Medium" TextColor="LightGray" 
@@ -75,7 +76,7 @@
                 <StackLayout Orientation="Horizontal"
                              VerticalOptions="CenterAndExpand"
                              HorizontalOptions="CenterAndExpand"
-                             HeightRequest="40">
+                             HeightRequest="45">
                     <Label Text="Apellido: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                     <Label x:Name="lblApellido" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
                     <Entry x:Name="txtApellido" FontSize="Medium" TextColor="LightGray" 
@@ -86,12 +87,13 @@
                 <StackLayout Orientation="Horizontal"
                              VerticalOptions="CenterAndExpand"
                              HorizontalOptions="CenterAndExpand"
-                             HeightRequest="40">
+                             HeightRequest="45">
                     <Label Text="Estado: " TextColor="LightGray" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
                     <Label x:Name="lblEstado" TextColor="LightGray" Text="" VerticalTextAlignment="Center" FontSize="Medium"/>
                     <Picker x:Name="pkEstado"
                             TitleColor="LightGray"
-                            HeightRequest="40"
+                            HeightRequest="45"
+                            WidthRequest="180"
                             VerticalOptions="Center"
                         IsVisible="False"
                         Title="Estado"
@@ -142,7 +144,44 @@
                     IsVisible="False"
                     Clicked="BtnGuardarCambios_Clicked"
                         />
+            <Button x:Name="btnVolver"
+                    Text="Volver al Menú"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="volver.png"
+                    Clicked="BtnVolver_Clicked"/>
 
+            <Button x:Name="btnMostrarOcultar"
+                    Text="Mostrar Contraseña"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="mostrar.png"
+                    IsVisible="False"
+                    Clicked="BtnMostrarOcultar_Clicked"
+                />
+
+            <Button x:Name="btnVolver2"
+                    Text="Volver"
+                    BorderRadius="10"
+                    BorderWidth="2"
+                    BorderColor="#353535"
+                    BackgroundColor="#545454"
+                    FontAttributes="Bold"
+                    TextColor="LightGray"                
+                    HeightRequest="40"
+                    ImageSource="volver.png"
+                    IsVisible="False"
+                    Clicked="BtnVolver2_Clicked"/>            
 
             <Label Text=""
                x:Name="lblMensaje"

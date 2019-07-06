@@ -30,8 +30,9 @@ namespace PrototipoLIINS.Vistas
             await Navigation.PushAsync(new VistaInstrucciones() { Title = "Volver al Menú" });
         }
 
-        private void BtnVincularDispositivo_Clicked(object sender, EventArgs e)
+        private async void BtnVincularDispositivo_Clicked(object sender, EventArgs e)
         {
+            await this.DisplayAlert("Liins:", "Conexión establecida...", "Aceptar");
             btnMonitorearDispensadores.IsEnabled = true;
             btnMonitorearDispensadores.IsVisible = true;
             btnVincularDispositivo.IsEnabled = false;
@@ -94,27 +95,28 @@ namespace PrototipoLIINS.Vistas
 
             lblNombre.Text = u.Nombre;
             lblApellido.Text = u.Apellido;
-            lblEmail.Text = u.Email;
-            lblContraseña.Text = u.Contraseña;
+            lblUser.Text = u.User;
+            txtContraseña.Text = u.Contraseña;
+            txtContraseña.IsEnabled = false;
         }
 
         private void BtnModificarPerfil_Clicked(object sender, EventArgs e)
         {
             lblNombre.IsVisible = false;
             lblApellido.IsVisible = false;
-            lblEmail.IsVisible = false;
+            lblUser.IsVisible = false;
             lblContraseña.IsVisible = false;
 
             txtNombre.IsVisible = true;
             txtApellido.IsVisible = true;
-            txtEmail.IsVisible = true;
-            txtContraseña.IsVisible = true;
+            txtUser.IsVisible = true;
+            txtContraseña.IsEnabled = true;
 
             Usuario u = Application.Current.Properties["datos"] as Usuario;
 
             txtNombre.Text = u.Nombre;
             txtApellido.Text = u.Apellido;
-            txtEmail.Text = u.Email;
+            txtUser.Text = u.User;
             txtContraseña.Text = u.Contraseña;
 
             btnEliminarCuenta.IsVisible = false;
@@ -122,6 +124,7 @@ namespace PrototipoLIINS.Vistas
             btnVolver.IsVisible = false;
 
             btnGuardarCambios.IsVisible = true;
+            btnMostrarOcultar.IsVisible = true;
             btnVolver2.IsVisible = true;
         }
 
@@ -170,7 +173,7 @@ namespace PrototipoLIINS.Vistas
             u.Nombre = txtNombre.Text;
             u.Apellido = txtApellido.Text;
             u.Contraseña = txtContraseña.Text;
-            u.Email = txtEmail.Text;
+            u.User = txtUser.Text;
 
             if (await this.DisplayAlert("¿Guardar cambios del Usuario?",
                     "IMPORTANTE: Los datos se cambiaran de forma permanente",
@@ -187,27 +190,47 @@ namespace PrototipoLIINS.Vistas
         {
             lblNombre.IsVisible = true;
             lblApellido.IsVisible = true;
-            lblEmail.IsVisible = true;
-            lblContraseña.IsVisible = true;
+            lblUser.IsVisible = true;
 
             txtNombre.IsVisible = false;
             txtApellido.IsVisible = false;
-            txtEmail.IsVisible = false;
-            txtContraseña.IsVisible = false;
+            txtUser.IsVisible = false;
+            txtContraseña.IsEnabled = false;
 
             btnEliminarCuenta.IsVisible = true;
             btnModificarPerfil.IsVisible = true;
             btnVolver.IsVisible = true;
 
             btnGuardarCambios.IsVisible = false;
+            btnMostrarOcultar.IsVisible = false;
             btnVolver2.IsVisible = false;
+
+            txtContraseña.IsPassword = true;
+            btnMostrarOcultar.Text = "Mostrar Contraseña";
+            btnMostrarOcultar.ImageSource = "mostrar.png";
 
             Usuario u = Application.Current.Properties["datos"] as Usuario;
 
             lblNombre.Text = u.Nombre;
             lblApellido.Text = u.Apellido;
-            lblEmail.Text = u.Email;
-            lblContraseña.Text = u.Contraseña;
+            lblUser.Text = u.User;
+            txtContraseña.Text = u.Contraseña;
+        }
+
+        private void BtnMostrarOcultar_Clicked(object sender, EventArgs e)
+        {
+            if (btnMostrarOcultar.Text.Equals("Mostrar Contraseña"))
+            {
+                txtContraseña.IsPassword = false;
+                btnMostrarOcultar.Text = "Ocultar Contraseña";
+                btnMostrarOcultar.ImageSource = "ocultar.png";
+            }
+            else
+            {
+                txtContraseña.IsPassword = true;
+                btnMostrarOcultar.Text = "Mostrar Contraseña";
+                btnMostrarOcultar.ImageSource = "mostrar.png";
+            }
         }
     }
 }

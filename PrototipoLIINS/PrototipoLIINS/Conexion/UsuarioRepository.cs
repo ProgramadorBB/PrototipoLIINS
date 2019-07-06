@@ -44,13 +44,13 @@ namespace PrototipoLIINS.Conexion
 
         public string EstadoMensaje;
 
-        public void AddNuevoUsuario(string email, string contraseña, string nombre, string apellido, string tipo, string estado)
+        public void AddNuevoUsuario(string user, string contraseña, string nombre, string apellido, string tipo, string estado)
         {
             int result = 0;
             try
             {
-                if (string.IsNullOrEmpty(email))
-                    throw new Exception("Email inválido");
+                if (string.IsNullOrEmpty(user))
+                    throw new Exception("Usuario inválido");
                 if (string.IsNullOrEmpty(contraseña))
                     throw new Exception("Contraseña inválida");
                 if (string.IsNullOrEmpty(nombre))
@@ -64,7 +64,7 @@ namespace PrototipoLIINS.Conexion
 
                 result = con.Insert(new Usuario()
                 {
-                    Email = email,
+                    User = user,
                     Contraseña = contraseña,
                     Nombre = nombre,
                     Apellido = apellido,
@@ -92,16 +92,16 @@ namespace PrototipoLIINS.Conexion
             return Enumerable.Empty<Usuario>();
         }
 
-        public Boolean AttempLogin(string email, string contraseña)
+        public Boolean AttempLogin(string us, string contraseña)
         {
             try
             {
-                if (string.IsNullOrEmpty(email))
-                    throw new Exception("Ingrese un email válido");
+                if (string.IsNullOrEmpty(us))
+                    throw new Exception("Ingrese un Usuario válido");
                 if (string.IsNullOrEmpty(contraseña))
                     throw new Exception("Ingrese una Contraseña válida");
                 var usuario = from u in con.Table<Usuario>()
-                              where u.Email == email && u.Contraseña == contraseña
+                              where u.User == us && u.Contraseña == contraseña
                               select u;
 
                 Usuario user = usuario.SingleOrDefault();
@@ -118,7 +118,7 @@ namespace PrototipoLIINS.Conexion
                 return false;
             }
 
-            EstadoMensaje = "El E-mail y/o la contraseña es inválida";
+            EstadoMensaje = "El Usuario y/o la contraseña es inválida";
             return false;
         }
 
@@ -148,15 +148,15 @@ namespace PrototipoLIINS.Conexion
             con.DeleteAll<Usuario>();
         }
 
-        public Usuario BuscarUsuario(string email)
+        public Usuario BuscarUsuario(string user)
         {
             try
             {
-                if (string.IsNullOrEmpty(email))
-                    throw new Exception("Ingrese un email válido");
+                if (string.IsNullOrEmpty(user))
+                    throw new Exception("Ingrese un Usuario válido");
 
                 var usuario = from u in con.Table<Usuario>()
-                              where u.Email == email
+                              where u.User == user
                               select u;
                 Usuario buscado = usuario.SingleOrDefault();
 
@@ -175,10 +175,10 @@ namespace PrototipoLIINS.Conexion
             return null;
         }
 
-        public Usuario userType(string email, string contraseña)
+        public Usuario userType(string us, string contraseña)
         {
             var usuario = from u in con.Table<Usuario>()
-                          where u.Email == email && u.Contraseña == contraseña
+                          where u.User == us && u.Contraseña == contraseña
                           select u;
 
             Usuario uTipo = usuario.SingleOrDefault();

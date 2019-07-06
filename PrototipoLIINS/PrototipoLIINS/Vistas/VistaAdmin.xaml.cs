@@ -22,7 +22,7 @@ namespace PrototipoLIINS.Vistas
 		{
             BindingContext = users;
             InitializeComponent ();
-            NavigationPage.SetHasNavigationBar(this, false);            
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void OnUpdateUser(object sender, ItemTappedEventArgs e)
@@ -92,7 +92,7 @@ namespace PrototipoLIINS.Vistas
 
         private async void BtnInformación_Clicked(object sender, EventArgs e)
         {
-            await this.DisplayAlert("Información: ","Para buscar un usuario debe ingresar el E-mail del Usuario", "OK");
+            await this.DisplayAlert("Información: ","Para buscar ingrese el Usuario", "OK");
         }
 
         private async void BtnInstrucciones_Clicked(object sender, EventArgs e)

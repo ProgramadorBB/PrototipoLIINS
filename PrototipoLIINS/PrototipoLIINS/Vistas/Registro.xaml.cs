@@ -26,9 +26,9 @@ namespace PrototipoLIINS.Vistas
             //lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
 
             string tipo = "Usuario";
-            string estado = "Desbloqueado";
+            string estado = "Bloqueado";
 
-            if (string.IsNullOrEmpty(txtEmail.Text) &&
+            if (string.IsNullOrEmpty(txtUser.Text) &&
                 string.IsNullOrEmpty(txtContraseña.Text) &&
                 string.IsNullOrEmpty(txtNombre.Text) &&
                 string.IsNullOrEmpty(txtApellido.Text))
@@ -39,14 +39,14 @@ namespace PrototipoLIINS.Vistas
             }
             else
             {
-                UsuarioRepository.Instancia.AddNuevoUsuario(txtEmail.Text, txtContraseña.Text,
+                UsuarioRepository.Instancia.AddNuevoUsuario(txtUser.Text, txtContraseña.Text,
                 txtNombre.Text, txtApellido.Text, tipo, estado);
 
                 string mensaje = UsuarioRepository.Instancia.EstadoMensaje;
 
                 if (mensaje.Equals("Constraint"))
                 {
-                    txtEmail.Text = string.Empty;
+                    txtUser.Text = string.Empty;
                     txtContraseña.Text = string.Empty;
                     txtNombre.Text = string.Empty;
                     txtApellido.Text = string.Empty;

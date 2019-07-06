@@ -174,14 +174,14 @@
                                                        VerticalOptions="Center"/>
                                                 <StackLayout Orientation="Vertical">
                                                     <StackLayout Orientation="Horizontal">
-                                                        <Label FontSize="Micro" TextColor="Black" Text="{Binding Tipo}"/>
+                                                        <Label FontSize="Micro" TextColor="Black" Text="Nombre:"/>
                                                         <Label FontSize="Micro" Text="-"/>
                                                         <Label FontSize="Micro" TextColor="Black" Text="{Binding Nombre}"/>
                                                         <Label FontSize="Micro" TextColor="Black" Text="{Binding Apellido}"/>
                                                     </StackLayout>
                                                     <StackLayout Orientation="Horizontal">
-                                                        <Label FontSize="Small" Text="Correo:"/>
-                                                        <Label FontSize="Small" Text="{Binding Email}"/>
+                                                        <Label FontSize="Small" Text="Usuario:"/>
+                                                        <Label FontSize="Small" Text="{Binding User}"/>
                                                         <Label FontSize="Small" Text="Estado:"/>
                                                         <Label FontSize="Small" Text="{Binding Estado}"/>
                                                     </StackLayout>

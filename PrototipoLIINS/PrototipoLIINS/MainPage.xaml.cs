@@ -32,18 +32,18 @@ namespace PrototipoLIINS
         private async void btnIngresar_Clicked(object sender, EventArgs e)
         {
             lblMensaje.Text = string.Empty;
-            Boolean isUsuarioExist = UsuarioRepository.Instancia.AttempLogin(txtEmail.Text, txtContraseña.Text);            
-            lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
+            Boolean isUsuarioExist = UsuarioRepository.Instancia.AttempLogin(txtUser.Text, txtContraseña.Text);
+            
 
             if (isUsuarioExist.Equals(true))
             {
-                Usuario userSesion = UsuarioRepository.Instancia.userType(txtEmail.Text, txtContraseña.Text);
+                Usuario userSesion = UsuarioRepository.Instancia.userType(txtUser.Text, txtContraseña.Text);
 
                 if (userSesion.Tipo.Equals("Admin"))
                 {
                     lblMensaje.Text = string.Empty;
                     Application.Current.Properties["sesion"] = userSesion;
-                    txtEmail.Text = string.Empty;
+                    txtUser.Text = string.Empty;
                     txtContraseña.Text = string.Empty;
                     if (userSesion.Contraseña.Equals("123"))
                     {
@@ -58,31 +58,36 @@ namespace PrototipoLIINS
                 }
                 else
                 {
-
+                    
                     if (userSesion.Estado.Equals("Bloqueado"))
                     {                        
                         txtContraseña.Text = string.Empty;
                         await this.DisplayAlert("Cuenta Bloqueada", "Para más información contactarse con el Administrador", "OK");
+                        lblMensaje.Text = string.Empty;
                     }
                     else
                     {
+
                         lblMensaje.Text = string.Empty;
                         await this.DisplayAlert("Bienvenido: ", userSesion.Nombre + " " + userSesion.Apellido, "Acceder");
                         Application.Current.Properties["sesion"] = userSesion;
-                        Usuario u = UsuarioRepository.Instancia.BuscarUsuario(txtEmail.Text);
+                        Usuario u = UsuarioRepository.Instancia.BuscarUsuario(txtUser.Text);
                         Application.Current.Properties["datos"] = u;
-                        txtEmail.Text = string.Empty;
+                        txtUser.Text = string.Empty;
                         txtContraseña.Text = string.Empty;
-                        lblMensaje.Text = string.Empty;
                         await Navigation.PushAsync(new VistaUsuario());
                     }
-                }
+                }                
+            }
+            else
+            {
+                lblMensaje.Text = UsuarioRepository.Instancia.EstadoMensaje;
             }
         }
 
         private async void BtnRegistrarCuenta_Clicked(object sender, EventArgs e)
         {
-            txtEmail.Text = "";
+            txtUser.Text = "";
             txtContraseña.Text = "";
             await Navigation.PushAsync(new Registro() { Title = "Volver"});
             // para dejar admin x defecto y borrar toda la bdd de ser necesario

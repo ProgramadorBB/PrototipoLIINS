@@ -11,7 +11,7 @@ namespace PrototipoLIINS.Modelo
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int Id { get; set; }
 
-        [MaxLength(100), Unique] public string Email { get; set; }
+        [MaxLength(100), Unique] public string User { get; set; }
 
         [MaxLength(100)] public string Contraseña { get; set; }
 

@@ -55,7 +55,7 @@
             </StackLayout>
 
             <Button x:Name="btnMostrarOcultar"
-                    Text="Mostrar Contraseñas"
+                    Text="Mostrar Contraseña"
                     BorderRadius="10"
                     BorderWidth="2"
                     BorderColor="#353535"
